@@ -1,0 +1,15 @@
+/* CSS Document */
+/*框架上面css样式*/
+@import url(base.css);
+#top_wrap{
+	width:100%;
+	height:280px;
+	border-bottom:1px solid #ccc;	
+}
+#top_wrap h1{
+	width:100%;
+	text-align:center;
+	color:#398ccc;
+	font-size:50px;	
+	padding-top:100px;
+}

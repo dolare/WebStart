@@ -1,0 +1,1120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>色块布局京东首页</title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	.w1210{
+		width: 1210px;
+		margin: 0 auto;
+	}
+	/*搜索区域开始*/
+	#top{
+		height: 30px;
+		width: 100%;
+		background: #F1F1F1;
+	}
+	/*搜素区域结束*/
+	/*618活动区域开始*/
+	#ad618{
+		height: 80px;
+		width: 100%;
+		background: #C41B22;
+	}
+	/*618活动区域结束*/
+	/*LOGO区域开始*/
+	#logo{
+		height: 80px;
+		padding-top: 20px;
+	}
+	#logo .left{
+		width: 270px;
+		height: 60px;
+		margin-right: 90px;
+		background: #1A1AE5;
+		float: left;
+	}
+	#logo .center{
+		width: 545px;
+		height: 65px;
+		background: #E8D21C;
+		float: left;
+	}
+	#logo .right{
+		width: 150px;
+		height: 50px;
+		margin-left: 100px;
+		float: left;
+		background: #373FD0;
+	}
+	/*LOGO区域结束*/
+	/*导航部分开始*/
+	#nav{
+		border-bottom: 2px solid #B1191A;
+		height: 44px;
+	}
+	#nav .left{
+		width: 210px;
+		height: 44px;
+		float: left;
+		background: #B1191A;
+	}
+	#nav .center{
+		width: 670px;
+		height: 44px;
+		margin-left:20px;
+		background: #E62BF2;
+		float:left;
+	}
+	#nav .right{
+		width: 130px;
+		height: 44px;
+		background: #27E7D3;
+		float: right;
+	}
+	/*导航部分结束*/
+	/*分类导航及轮播区域开始*/
+	#main{
+		height: 470px;
+	}
+	#main .left{
+		width: 210px;
+		background: #C81623;
+		height: 470px;
+		float: left;
+	}
+	#main .center{
+		margin: 10px 0 0 10px;
+		width: 730px;
+		float: left;
+		height: 460px;
+		background: #EE8800;
+	}
+	#main .right{
+		width: 250px;
+		float: right;
+		margin-top: 10px;
+		height: 458px;
+		border: 1px solid #E4E4E4;
+	}
+	#main .right .title_top{
+		height: 44px;
+		width: 100%;
+		border-bottom: 1px dashed #E8E8E7;
+		background: #3ADE1A;
+	}
+	#main .right .top{
+		height: 160px;
+		width: 100%;
+		border-bottom: 1px dashed #E8E8E7;
+		background: #3ADE1A;
+	}
+	#main .right .title_down{
+		height: 44px;
+		width: 100%;
+		border-bottom: 1px solid #E8E8E7;
+		background: #B8D818;
+	}
+	#main .right .down{
+		height:209px;
+		width: 100%;
+		background: #B8D818;
+	}
+	/*分类导航及轮播区域结束*/
+	/*今日推荐区域开始*/
+	#Recommend{
+		height: 164px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		background: #7D21C4;
+		clear: both;
+	}
+	/*今日推荐区域结束*/
+	/*猜你喜欢区域开始*/
+	#guess{
+		height: 300px;
+	}
+	#guess .top{
+		height: 36px;
+		width: 100%;
+		border-bottom: 1px solid #D1D1D1;
+	}
+	#guess .top .left{
+		width: 300px;
+		height: 36px;
+		background: #D47D16;
+		float: left;
+	}
+	#guess .top .right{
+		width: 70px;
+		height: 36px;
+		background: #D47D16;
+		float: right;
+	}
+	#guess .down{
+		height: 230px;
+		border:1px solid #EDEDED;
+		border-top: none;
+		width: 1208px;
+		background: #DE21B8;
+		padding-top: 20px;
+	} 
+	/*猜你喜欢区域结束*/
+	/*京东特色购区域开始*/
+	#tese{
+
+	}
+	#tese .top{
+		height: 36px;
+		width: 100%;
+		background: #D7F34A;
+	}
+	#tese .down{
+		border-top: 1px solid #EDEDED;
+		border-left: 1px solid #EDEDED;
+		height: 404px;
+	}
+	#tese .down .left{
+		width: 202px;
+		float: left;
+		height: 100%;
+	}
+	#tese .down ul li{
+		width: 201px;
+		height: 200px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		list-style: none;
+		float: left;
+		background: #D925D3;
+	}
+	#tese .down .center{
+		width: 404px;
+		float: left;
+		height: 100%;
+	}
+	#tese .down .center .top{
+		width: 403px;
+		height: 201px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #1AE9C9;
+		float: left;
+	}
+	#tese .down .center .down{
+		height: 201px;
+		float: left;
+		border: none;
+	}
+	#tese .down .right{
+		width: 603px;
+		float: left;
+		height: 100%;
+	}
+	#tese .down .right ul li{
+		width: 200px;
+		background: #4223E2;
+	}
+	/*京东特色购区域结束*/
+	/*广告开始*/
+	#ad110{
+		height: 110px;
+		background: #6DAA2B;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	/*广告结束*/
+	/*1F区域开始*/
+	.main_nav{
+		height: 36px;
+		border-bottom: 1px solid #C81623;
+	}
+	.main_nav .left{
+		width: 140px;
+		height: 36px;
+		float: left;
+		background: #D5FF01;
+		line-height: 36px;
+		text-align: center;
+	}
+	.main_nav .right{
+		width: 640px;
+		height: 36px;
+		float: right;
+		background: #D5FF01;
+	}
+	#F1 .down{
+		height: 632px;
+	}
+	#F1 .col1{
+		width: 330px;
+		float: left;
+	}
+	#F1 .col1 .row1{
+		width: 100%;
+		height: 251px;
+		background: #262AE0;
+	}
+	#F1 .col1 .row2{
+		width: 100%;
+		height: 94px;
+		background: #2A83A8;
+	}
+	#F1 .col1 .row3{
+		height: 128px;
+		width: 100%;
+		background: #39B244;
+	}
+	#F1 .col1 .row4{
+		height: 157px;
+		width: 328px;
+		border: 1px solid #EDEDED;
+		background: #E621ED;
+	}
+	#F1 .col2{
+		width: 440px;
+		float: left;
+	}
+	#F1 .col2 .row1{
+		width: 439px;
+		height: 157px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #E419BB;
+	}
+	#F1 .col2 .row2{
+		width: 439px;
+		height: 315px;
+		background: #269E1A;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+	}
+	#F1 .col2 .row3{
+		width: 439px;
+		height: 157px;
+		background: #E41F2D;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+	}
+	#F1 .col3,#F1 .col4{
+		float: left;
+		width: 220px;
+	}
+	#F1 .col3 ul li,#F1 .col4 .row1,#F1 .col4 .row2{
+		height: 157px;
+		width: 219px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #E9B321;
+		list-style: none;
+	}
+	#F1 .col4 .row1,#F1 .col4 .row2{
+		background: #2E25EF;
+	}
+	#F1 .col4 .row3{
+		height: 315px;
+		width: 219px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #2E25EF;
+		list-style: none;
+	}
+	.ad66{
+		height: 66px;
+		margin-top: 10px;
+		background: #48EFD5;
+		margin-bottom: 20px;
+	}
+	/*1F区域结束*/
+	/*2F区域开始*/
+	.down474{
+		height: 474px;
+	}
+	.down474 .col1{
+		width: 210px;
+		float: left;
+	}
+	.down474 .col1 .row1{
+		height: 236px;
+		width:100%;;
+		background: #0E7E21;
+	}
+	.down474 .col1 .row2{
+		height: 92px;
+		width:100%;
+		background: #1EA470;
+	}
+	.down474 .col1 .row3{
+		height: 70px;
+		width:100%;
+		background: #D1F80E;
+	}
+	.down474 .col1 .row4{
+		height: 76px;
+		width:100%;
+		background: #F329AE;
+	}
+	.down474 .col2{
+		width: 339px;
+		height: 473px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #2E25EF;
+		float: left;
+	}
+	.down474 .col3{
+		width: 660px;
+		float: left;
+	}
+	.down474  ul li{
+		float: left;
+		background: #1CE450;
+		width: 219px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		list-style: none;
+	}
+	.down474 .col3 ul li.li1{
+		height: 296px;
+	}
+	.down474 .col3 ul li.li2{
+		height: 176px;
+	}
+	/*2F区域结束*/
+	/*3F区域开始*/
+	.down474 .w330{
+		width: 330px;
+	}
+	.down474 .w330 .row2{
+		height: 46px;
+	}
+	.down474 .w330 .row4{
+		height: 122px;
+	}
+	.down474 .w440{
+		width: 440px;
+		border: none;
+	}
+	.down474 .w440 .top{
+		width: 439px;
+		height: 236px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #E227C1;
+	}
+	.down474 ul li.li3{
+		width: 219px;
+		height: 117px;
+		background: #66780C;
+	}
+	.down474 ul li.li4{
+		width: 219px;
+		height: 236px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #8C16D7;
+	}
+	/*3F区域结束*/
+	.ad110{
+		height: 110px;
+		background: #FE00D7;
+		margin-bottom: 20px;
+	}
+	.w220{
+		width: 220px;
+		float: left;
+	}
+	.down474 .w340{
+		width: 340px;
+		height: 100%;
+		background: #D0F906;
+		float: left;
+	}
+	/*11F区域开始*/
+	.down474 .w395{
+		width: 395px;
+		height: 100%;
+		float: left;
+	}
+	.down474 .w395 .top{
+		width: 394px;
+		height: 237px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #1B1BE5;
+	}
+	.down474 .w395 ul li.li5{
+		width: 196px;
+		height: 117px;
+		border-right: 1px solid #EDEDED;
+		border-bottom: 1px solid #EDEDED;
+		background: #37D865;
+	}
+	/*11F区域结束*/
+	/*今日抄底区域开始*/
+	#chaodi .main_nav{
+		border: none;
+	}
+	#chaodi .down{
+		height: 283px;
+	}
+	#chaodi .down .left{
+		float: left;
+		width: 900px;
+		height: 282px;
+		border-top: 1px solid #E5E5E5;
+		border-left: 1px solid #E5E5E5;
+	}
+	#chaodi .down .left dt,#chaodi .down .left dd{
+		border-right: 1px solid #E5E5E5;
+		border-bottom: 1px solid #E5E5E5;
+		background: #E421EB;
+		float: left;
+	}
+	#chaodi .down .left dt{
+		width: 239px;
+		height: 281px;
+	}
+	#chaodi .down .left dd{
+		width: 219px;
+		height: 140px;
+	}
+	#chaodi .down .right{
+		width: 309px;
+		height: 281px;
+		background: #1313CD;
+		float: right;
+	}
+	#chaodi .main_nav .remen{
+		margin-left: 760px;
+	}
+	/*今日抄底区域结束*/
+	.ad94{
+		height: 94px;
+		width: 100%;
+		background: #F07512;
+		margin: 20px 0;
+	}
+	/*购物说明区域开始*/
+	#detail{
+		height: 156px;
+	}
+	#detail dl{
+		float: left;
+		height: 100%;
+		width: 199px;
+	}
+	#detail dl.dl1{
+		background: #E409D7;
+	}
+	#detail dl.dl2{
+		background: #272CE9;
+	}
+	#detail dl.dl3{
+		background: #E409D7;
+	}
+	#detail dl.dl4{
+		background: #CDF117;
+	}
+	#detail dl.dl5{
+		background: #48EA27;
+		width: 100px;
+	}
+	#detail dl.dl6{
+		background: #E5551D;
+		width: 310px;
+	}
+	li{
+		list-style: none;
+	}
+	/*购物说明区域结束*/
+	/*底部区域开始*/
+	#footer{
+		border-top: 1px solid #E5E5E5;
+		margin-top: 20px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+	#footer .top{
+		height: 18px;
+		width: 790px;
+		margin: 0 auto;
+		background: #F220C3;
+	}
+	#footer .center{
+		height: 56px;
+		margin: 10px 0;
+	}
+	#footer .center ul li{
+		height: 14px;
+		margin: 0 auto;
+	}
+	#footer .center ul li.li1{
+		width: 845px;
+		background: #F20F2A;
+	}
+	#footer .center ul li.li2{
+		width: 695px;
+		background: #1212E8;
+	}
+	#footer .center ul li.li3{
+		width: 722px;
+		background: #27FB45;
+	}
+	#footer .center ul li.li4{
+		width: 237px;
+		background: #F309A9;
+	}
+	#footer .down{
+		width: 770px;
+		height: 32px;
+		background: #101AED;
+		margin: 0 auto;
+	}
+	/*底部区域结束*/
+</style>
+<body>
+<!-- 搜索区域开始 -->
+<div id="top"></div>
+<!-- 搜素区域结束 -->
+<!-- 618活动区域开始 -->
+<div id="ad618"></div>
+<!-- 618活动区域结束 -->
+<!-- LOGO区域开始 -->
+<div id="logo" class="w1210">
+	<div class="left"></div>
+	<div class="center"></div>
+	<div class="right"></div>
+</div>
+<!-- LOGO区域结束 -->
+<!-- 导航部分开始 -->
+<div id="nav">
+	<div class="w1210">
+		<div class="left"></div>
+		<div class="center"></div>
+		<div class="right"></div>
+	</div>
+</div>
+<!-- 导航部分结束 -->
+<!-- 分类导航及轮播区域开始 -->
+<div id="main" class="w1210">
+	<div class="left"></div>
+	<div class="center"></div>
+	<div class="right">
+		<div class="title_top"></div>
+		<div class="top"></div>
+		<div class="title_down"></div>
+		<div class="down"></div>
+	</div>
+</div>
+<!-- 分类导航及轮播区域结束 -->
+<!-- 今日推荐区域开始 -->
+<div id="Recommend" class="w1210">今日推荐</div>
+<!-- 今日推荐区域结束 -->
+<!-- 猜你喜欢区域开始 -->
+<div id="guess" class="w1210">
+	<div class="top">
+		<div class="left">猜你喜欢</div>
+		<div class="right"></div>
+	</div>
+	<div class="down"></div>
+</div>
+<!-- 猜你喜欢区域结束 -->
+<!-- 京东特色购区域开始 -->
+<div id="tese" class="w1210">
+	<div class="top">京东特色购</div>
+	<div class="down">
+		<div class="left">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="center">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 京东特色购区域结束 -->
+<!-- 广告开始 -->
+<div id="ad110" class="w1210"></div>
+<!-- 广告结束 -->
+<!-- 1F区域开始 -->
+<div id="F1" class="w1210">
+	<div class="main_nav">
+		<div class="left">1F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col2">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+		</div>
+		<div class="col3">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="col4">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 1F区域结束 -->
+<!-- 2F区域开始 -->
+<div id="F2" class="w1210">
+	<div class="main_nav">
+		<div class="left">2F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col2"></div>
+		<div class="col3">
+			<ul>
+				<li class="li1"></li>
+				<li class="li1"></li>
+				<li class="li1"></li>
+				<li class="li2"></li>
+				<li class="li2"></li>
+				<li class="li2"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 2F区域结束 -->
+<!-- 3F区域开始 -->
+<div id="F3" class="w1210">
+	<div class="main_nav">
+		<div class="left">3F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1 w330">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col2 w440">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li4"></li>
+					<li class="li4"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 3F区域结束 -->
+<!-- 3F区域开始 -->
+<div id="F4" class="w1210">
+	<div class="main_nav">
+		<div class="left">4F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1 w330">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col2 w440">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li4"></li>
+					<li class="li4"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 4F区域结束 -->
+<!-- 5F区域开始 -->
+<div id="F5" class="w1210">
+	<div class="main_nav">
+		<div class="left">5F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1 w330">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col2 w440">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li4"></li>
+					<li class="li4"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li3"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 5F区域结束 -->
+<div class="ad110 w1210"></div>
+<!-- 6F区域开始 -->
+<div id="F6" class="w1210">
+	<div class="main_nav">
+		<div class="left">6F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col4 w220">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+		<div class="col2"></div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 6F区域结束 -->
+<!-- 7F区域开始 -->
+<div id="F7" class="w1210">
+	<div class="main_nav">
+		<div class="left">7F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col4 w220">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+		<div class="col2"></div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 7F区域结束 -->
+<!-- 8F区域开始 -->
+<div id="F8" class="w1210">
+	<div class="main_nav">
+		<div class="left">8F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col4 w220">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+		<div class="col2"></div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 8F区域结束 -->
+<!-- 9F区域开始 -->
+<div id="F9" class="w1210">
+	<div class="main_nav">
+		<div class="left">9F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col4 w220">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+		<div class="col2"></div>
+		<div class="col3 w440">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 9F区域结束 -->
+<!-- 10F区域开始 -->
+<div id="F10" class="w1210">
+	<div class="main_nav">
+		<div class="left">10F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="col4 w220">
+			<ul>
+				<li class="li4"></li>
+				<li class="li4"></li>
+			</ul>
+		</div>
+		<div class="col2 w440">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li4"></li>
+					<li class="li4"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col3 w340"></div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 10F区域结束 -->
+<!-- 11F区域开始 -->
+<div id="F11" class="w1210">
+	<div class="main_nav">
+		<div class="left">11F</div>
+		<div class="right"></div>
+	</div>
+	<div class="down474">
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="w395">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li5"></li>
+					<li class="li5"></li>
+					<li class="li5"></li>
+					<li class="li5"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col1">
+			<div class="row1"></div>
+			<div class="row2"></div>
+			<div class="row3"></div>
+			<div class="row4"></div>
+		</div>
+		<div class="w395">
+			<div class="top"></div>
+			<div class="down">
+				<ul>
+					<li class="li5"></li>
+					<li class="li5"></li>
+					<li class="li5"></li>
+					<li class="li5"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ad66"></div>
+</div>
+<!-- 11F区域结束 -->
+
+<!-- 今日抄底区域开始 -->
+<div id="chaodi" class="w1210">
+	<div class="main_nav">
+		<div class="left">今日抄底</div>
+		<div class="left remen">热门晒单</div>
+	</div>
+	<div class="down">
+		<div class="left">
+			<dl>
+				<dt></dt>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+			</dl>
+		</div>
+		<div class="right"></div>
+	</div>
+</div>
+<!-- 今日抄底区域结束 -->
+<div class="ad94"></div>
+<!-- 购物说明区域开始 -->
+<div id="detail" class="w1210">
+	<dl class="dl1">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+	<dl class="dl2">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+	<dl class="dl3">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+	<dl class="dl4">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+	<dl class="dl5">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+	<dl class="dl6">
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+		<dd></dd>
+	</dl>
+</div>
+<!-- 购物说明区域结束 -->
+<!-- 底部区域开始 -->
+<div id="footer" class="w1210">
+	<div class="top"></div>
+	<div class="center">
+		<ul>
+			<li class="li1"></li>
+			<li class="li2"></li>
+			<li class="li3"></li>
+			<li class="li4"></li>
+		</ul>
+	</div>
+	<div class="down"></div>
+</div>
+<!-- 底部区域结束 -->
+</body>
+</html>

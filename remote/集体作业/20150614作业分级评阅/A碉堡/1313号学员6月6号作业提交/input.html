@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #F6F6F6;
+	font-family: "宋体";
+	font-size: 14px;
+	color: #666666;
+}
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.left{
+	width: 220px;
+	float: left;
+}
+.left .pic2{
+	margin-top: 80px;
+}
+.right{
+	width: 670px;
+	float: left;
+	background: #fff;
+	position: relative;
+}
+.right .right_top{
+	height: 42px;
+	padding-top: 15px;
+	color: #F3316B;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+}
+.right .right_top .left_pic,.right .right_top .right_pic{
+	width: 84px;
+	height: 42px;
+	overflow: hidden;
+	position: absolute;
+	top: 15px;
+	background: url(images/img2.png) no-repeat;
+}
+.right .right_top .left_pic{
+	left: -7px;
+}
+.right .right_top .right_pic{
+	right: -7px;
+	background-position: -84px 0;
+}
+.right .right_top .cont{
+	line-height: 34px;
+}
+dl{
+	height: 32px;
+	line-height: 32px;
+	padding-top: 20px;
+}
+dl dt,dl dd{
+	float: left;
+}
+dl dt{
+	width: 85px;
+	text-align: right;
+	padding-right: 15px;
+}
+dl dd label{
+	padding-left: 10px;
+}
+.ddlast{
+	float: right;
+}
+.dl1 dd{
+	padding-right: 30px;
+}
+.dl2 dd{
+	padding-right: 10px;
+}
+.dl4 dd{
+	padding-right: 20px;
+}
+.dl8 dd{
+	padding-right: 30px;
+}
+.zengsong{
+	padding-left: 90px;
+}
+.dl13 dd{
+	width: 370px;
+}
+.dl13 dd div{
+	float: left;
+	padding-right: 20px;
+}
+.right dl .ddlast{
+	float: right;
+	padding-right: 150px;
+	font-size: 12px;
+	color: #ABABAB;
+}
+.dl14{
+	clear: both;
+	height: 180px;
+}
+.dl14 textarea{
+	height: 180px;
+	font-size: 14px;
+	color: #C7C7C7;
+	line-height: 22px;
+}
+.dl15{
+	padding-left: 150px;
+}
+.dl15 dt,.dl15 dd{
+	width: 460px;
+	text-align: left;
+}
+.dl15 dd{
+	font-size: 12px;
+	color: #C7C7C7;
+}
+.dl15 dt input{
+	width: 278px;
+	height: 49px;
+	font-size: 24px;
+	font-family: '微软雅黑';
+	color:#fff;
+	background: #18C4EA;
+	border: none;
+}
+.dl15 dd a{
+	text-decoration: underline;
+	color: #939393;
+}
+.promit{
+	padding:40px 0 90px;
+}
+.foot{
+	clear: both;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: 12px;
+	color: #9D9B9B;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="left">
+		<div class="pic1"><a href="javascript:void(0);"><img src="images/logo_reg.jpg" alt=""></a></div>
+		<div class="pic2"><img src="images/y.png" alt=""></div>
+		<div class="pic3"><img src="images/img1.png" alt=""></div>
+	</div><!-- left end -->
+	<div class="right">
+		<div class="right_top">
+			<div class="cont">一分钟快速注册，青春不常在，抓紧谈恋爱</div>
+			<div class="left_pic"></div>
+			<div class="right_pic"></div>
+		</div><!-- right_top end -->
+		<div class="form">
+			<form action="">
+				<dl class="dl1">
+					<dt>我是</dt>
+					<dd><input type="radio" id="man" name="sex" checked="checked"><label for="man">男</label></dd>
+					<dd><input type="radio" id="woman" name="sex"><label for="woman">女</label></dd>
+					<dd class="ddlast">* 注册后不可更改</dd>
+				</dl>
+				<dl class="dl2">
+					<dt>生日</dt>
+					<dd>
+						<select name="nian" id="nian">
+							<option value="">2015年</option>
+							<option value="">2014年</option>
+							<option value="">2013年</option>
+							<option value="">2012年</option>
+							<option value="">2011年</option>
+							<option value="">2010年</option>
+							<option value="">2009年</option>
+							<option value="">2008年</option>
+							<option value="">2007年</option>
+							<option value="">2006年</option>
+						</select>
+					</dd>
+					<dd>
+						<select name="yue" id="yue">
+							<option value="">1月</option>
+							<option value="">2月</option>
+							<option value="">3月</option>
+							<option value="">4月</option>
+							<option value="">5月</option>
+							<option value="" selected="selected">6月</option>
+							<option value="">7月</option>
+							<option value="">8月</option>
+							<option value="">9月</option>
+							<option value="">10月</option>
+							<option value="">11月</option>
+							<option value="">12月</option>
+						</select>
+					</dd>
+					<dd>
+						<select name="ri" id="ri">
+							<option value="">1日</option>
+							<option value="">2日</option>
+							<option value="">3日</option>
+							<option value="">4日</option>
+							<option value="">5日</option>
+							<option value="">6日</option>
+							<option value="" selected="selected">7日</option>
+							<option value="">8日</option>
+							<option value="">9日</option>
+							<option value="">10日</option>
+							<option value="">11日</option>
+							<option value="">12日</option>
+						</select>
+					</dd>
+					<dd class="ddlast">* 注册后不可更改</dd>
+				</dl>
+				<dl class="dl3">
+					<dt>常住地</dt>
+					<dd>
+						<select name="addr" id="addr">
+							<option value="">深圳</option>
+							<option value="">上海</option>
+							<option value="">武汉</option>
+							<option value="">北京</option>
+							<option value="">西安</option>
+							<option value="">杭州</option>
+							<option value="">成都</option>
+							<option value="">广州</option>
+							<option value="">长沙</option>
+							<option value="">南京</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="dl4">
+					<dt>婚姻状况</dt>
+					<dd><input type="radio" name="marry" id="weihun"><label for="weihun">未婚</label></dd>
+					<dd><input type="radio" name="marry" id="liyi"><label for="liyi">离异</label></dd>
+					<dd><input type="radio" name="marry" id="sangou"><label for="sangou">丧偶</label></dd>
+				</dl>
+				<dl>
+					<dt>身高</dt>
+					<dd>
+						<select name="height" id="height">
+							<option value="">170厘米</option>
+							<option value="">171厘米</option>
+							<option value="">172厘米</option>
+							<option value="">173厘米</option>
+							<option value="">174厘米</option>
+							<option value="">175厘米</option>
+							<option value="">176厘米</option>
+							<option value="">177厘米</option>
+							<option value="">178厘米</option>
+							<option value="">179厘米</option>
+							<option value="">180厘米</option>
+							<option value="">181厘米</option>
+							<option value="">182厘米</option>
+							<option value="">183厘米</option>
+							<option value="">184厘米</option>
+							<option value="">185厘米</option>
+							<option value="">186厘米</option>
+							<option value="">188厘米</option>
+							<option value="">188厘米</option>
+							<option value="">189厘米</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>学历</dt>
+					<dd>
+						<select name="xueli" id="xueli">
+							<option value="">高中及以下</option>
+							<option value="">大专</option>
+							<option value="" selected="selected">本科</option>
+							<option value="">双学士</option>
+							<option value="">硕士</option>
+							<option value="">博士</option>
+							<option value="">博士后</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>月薪</dt>
+					<dd>
+						<select name="yuexin" id="yuexin">
+							<option value="">2000元以下</option>
+							<option value="">2000-5000元</option>
+							<option value="">5000-10000元</option>
+							<option value="">10000-20000元</option>
+							<option value="">20000以上</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="dl8">
+					<dt>注册方式</dt>
+					<dd><input type="radio" id="phone"><label for="phone">手机注册</label></input></dd>
+					<dd><input type="radio" id="email"><label for="email">邮箱注册</label></input></dd>
+				</dl>
+				<div class="zengsong"><img src="images/prize_image.png" alt=""></div>
+				<dl>
+					<dt>手机号</dt>
+					<dd><input type="text"></dd>
+				</dl>
+				<dl>
+					<dt>验证码</dt>
+					<dd><input type="text"></dd>
+				</dl>
+				<dl>
+					<dt>创建密码</dt>
+					<dd><input type="text"></dd>
+				</dl>
+				<dl>
+					<dt>昵称</dt>
+					<dd><input type="text"></dd>
+				</dl>
+				<dl class="dl13">
+					<dt>我的标签</dt>
+					<dd>
+						<div><input type="checkbox" value="" id="love1"><label for="love1">独立</label></div>
+						<div><input type="checkbox" value="" id="love2"><label for="love2">阳光</label></div>
+						<div><input type="checkbox" value="" id="love3"><label for="love3">幽默</label></div>
+						<div><input type="checkbox" value="" id="love4"><label for="love4">内敛</label></div>
+						<div><input type="checkbox" value="" id="love5"><label for="love5">执着</label></div>
+						<div><input type="checkbox" value="" id="love6"><label for="love6">完美主义</label></div>
+						<div><input type="checkbox" value="" id="love7"><label for="love7">开朗</label></div>
+						<div><input type="checkbox" value="" id="love8"><label for="love8">低调</label></div>
+						<div><input type="checkbox" value="" id="love9"><label for="love9">网游</label></div>
+						<div><input type="checkbox" value="" id="love10"><label for="love10">运</label></div>
+					</dd>
+				</dl>
+				<dl class="dl14">
+					<dt>自我介绍</dt>
+					<dd><textarea name="jieshao" id="jieshao" cols="50" rows="10">这家伙很懒，什么都没写，拖出去打~~~</textarea></dd>
+				</dl>
+				<dl class="dl15">
+					<dt><input type="submit" value="免费注册"></dt>
+					<dd><input checked="checked" type="checkbox"><label for="">我同意<a href="javascript:void(0);">注册条款</a>和<a href="javascript:void(0);">会员加入标准</a></label></dd>
+					<dd><input checked="checked" type="checkbox"><label for="">同时创建旗下全认证婚恋网站<a href="javascript:void(0);">爱真心</a>帐号</label></dd>
+					<dd class="promit">我承诺年满18岁、单身、抱着严肃的态度，真诚寻找另一半</dd>
+				</dl>
+			</form>
+		</div><!-- form end -->
+	</div><!-- right end -->
+	<div class="foot">中文实名：世纪佳缘 ICP证书：沪B2-20100074 Copyright © 2003-2015 版权所有</div>
+</div><!-- wrap end -->
+</body>
+</html>

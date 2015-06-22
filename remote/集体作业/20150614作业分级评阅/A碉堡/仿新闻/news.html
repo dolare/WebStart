@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿写澎湃新闻页面</title>
+<style type="text/css">
+	/*全局css*/
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		margin: 0 auto;
+		background: #f0f0f0;
+		font-family: 微软雅黑;
+	}
+	/*header部分--------------------------------------------------*/
+	#header{
+		width: 100%;
+		height: 100px;
+		margin-bottom: 20px;
+		background: #fff;
+		border-bottom: 1px solid #cdcdcd;
+	}
+	#header .hd{
+		min-width: 1100px;
+		height: 100px;
+	}
+	#header .hd_content{
+		margin: 0 auto;
+		width: 1100px;
+		height: 100px;
+	}
+
+	/*LOGO部分*/
+	.logo{
+		width: 288px;
+		height: 100px;
+		float: left;
+		border-right: 2px solid #e5e5e5;
+	}
+	.logo a{
+		width: 116px;
+		height: 68px;
+		display: block;
+		margin-left: 120px;
+		margin-top: 16px;
+	}
+	/*分类导航*/
+	.hd .fenlei{
+		width: 420px;
+		height: 70px;
+		margin-left: 22px;
+		padding-top: 20px;
+		float: left;
+
+	}
+	.hd .fenlei li{
+		width: 60px;
+		height: 82px;
+		float: left;
+		list-style: none;
+	}
+	.hd .fenlei li a{
+		display: block;
+		position: relative;
+		width: 18px;
+		height: 40px;
+		line-height:18px;
+		font-style: 微软雅黑;
+		font-size: 18px;
+		color: #717171;
+		background: #fff;
+		padding:10px 13px;
+		margin: 0 8px;
+		text-decoration: none;
+		border-radius: 2px;
+		transition:background-color 0.15s linear 0s;
+ 	}
+ 	.hd .fenlei li a:hover{
+ 		background: #E83829;
+ 		color: #fff;
+ 		transition:background-color 0.15s linear 0s;
+ 	}
+ 	.hd .fenlei li a:hover span{
+ 		display: none;
+ 	}
+ 	.hd .fenlei .chacked{
+ 		background: #E83829;
+ 		color: #fff;
+ 	}
+ 	/*小标签*/
+ 	.hd .fenlei li span{
+ 		width: 27px;
+ 		height:14px;
+ 		background: url(images/new_bg.png) no-repeat 0 0 scroll;
+ 		position: absolute;
+ 		right: -17px;
+ 		top: -1px;
+ 	}
+ 	/*注册登录爆料按钮*/
+ 	.hd .zhuce{
+ 		height: 30px;
+ 		width: 200px;
+ 		padding-top: 33px;
+ 		padding-left: 10px;
+ 		float: left;
+ 	}
+ 	.hd .zhuce a{
+ 		border-left: 2px solid #e5e5e5;
+ 		display: block;
+ 		float: right;
+ 		font-style: 微软雅黑;
+ 		font-size: 14px;
+ 		height: 30px;
+ 		line-height: 15px;
+ 		width: 14px;
+ 		color: #717171;
+ 		padding: 0 7px;
+ 	}
+ 	.hd .zhuce a:hover{
+ 		color: #027eb3;
+ 	}
+ 	/*文章box部分--------------------------------------------------*/
+ 	#main_box{
+ 		width: 940px;
+		margin: 0 auto;
+		background: #fff;
+		border: 1px #dfdfdf solid;
+		margin-bottom: 40px;
+ 	}
+ 	#main_box .contont{
+ 		margin: 0 auto;
+ 		width: 670px;
+ 		padding: 40px 135px;
+ 		height: 100%;
+ 		margin-bottom: 50px;
+ 	}
+ 	/*指向标签*/
+ 	.news_path,
+ 	.news_path a{
+ 		color: #00a4eb;
+ 	}
+ 	/*文章标题*/
+	.news_title{
+		margin: 28px 0 34px;
+	}
+	.news_title a{
+		text-decoration: none;
+	}
+	.news_title h1{
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 44px;
+		color: #333;
+	}
+
+	/*文章发布时间及来源信息*/
+	.news_about{
+		border-top: 1px solid #dfdfdf;
+    	height: 48px;
+    	margin-bottom: 36px;
+	}
+	.news_about p{
+		color: #8e8e8e;
+    	font-size: 14px;
+    	line-height: 24px;
+	}
+	/*文章正文部分*/
+	/*照片*/
+	.news_text .pic{
+		text-align: center;
+		padding: 4px 0;
+		
+	}
+	/*正文部分*/
+	.news_text{
+		margin-bottom: 46px;
+	}
+	.news_text p{
+		font-size: 16px;
+		font-family: 微软雅黑;
+		color: #333;
+		padding: 8px 0;
+		letter-spacing: 0.5px;
+		line-height: 30px;
+		text-indent: 2em;
+	}
+	.news_text .p1{
+		margin-top: 8px;
+	}
+	/*文章结尾部分*/
+	.news_jw{
+		padding-bottom: 16px;
+	}
+	.news_jw .news_jw_contont{
+		width: 670px;
+		height: 220px;
+		background: #145897;
+		cursor: pointer;
+		margin-bottom: 30px;
+		position: relative;
+	}
+
+	/*博客分享部分*/
+	.news_jw .news_jw_contont .news_nr{
+		position: absolute;
+		width: 350px;
+		height: 105px;
+		margin-left: 156px;
+		margin-top: 40px;
+	}
+	.news_jw .news_jw_contont .news_bq{
+		background: #0C355B;
+		width: 98px;
+		height: 34px;
+		line-height: 34px;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+		border: 1px #729BC1 solid;
+	}
+	.news_jw .news_jw_contont .news_ms{
+		margin: 10px auto 0;
+		color: #fff;
+		text-align: center;
+		line-height: 30px;
+		font-size: 17px;
+		width: 350px;
+	}
+	/*name部分*/
+	.news_jw .news_jw_contont .news_info{
+		position: absolute;
+		width: 220px;
+		height: 34px;	
+		text-align: center;
+		left: 210px;
+		bottom:13px;
+	}
+	.news_jw .news_jw_contont .news_info .yaom{
+		width: 250px;
+		height: 34px;
+	}
+	.news_jw .news_jw_contont .yaom_photo{
+		width: 35px;
+		height: 34px;
+		float: left;
+		background: url(images/ym.png) no-repeat 0 0 scroll;
+	}
+	.news_jw .news_jw_contont .u_name{
+		font-size: 12px;
+		color: #fff;
+		padding-right: 18px;
+	}
+	.news_jw .news_jw_contont span{
+		font-size: 12px;
+		color: #fff;
+	}
+	.news_jw .news_jw_contont .zan{
+		background: url(images/ask_zan.png) no-repeat 0 0;
+		padding-left: 18px;
+		width: 12px;
+		cursor: pointer;
+		margin-right: 4px;
+	}
+	/*录入编辑*/
+	.news_editor {
+    	color: #8e8e8e;
+    	font-size: 14px;
+    	line-height: 20px;
+	}
+	.news_editor span {
+    	display: inline-block;
+    	float: right;
+    	font-size: 12px;
+    	line-height: 20px;
+    	min-width: 340px;
+    	text-align: right;
+	}
+	/*关键词*/
+
+	.news_keywords {
+    	background-color: #f0f0f0;
+    	color: #8e8e8e;
+   	 	font-size: 14px;
+    	line-height: 25px;
+    	margin-top: 6px;
+    	text-indent: 4px;
+	}
+	/*页脚部分*/
+	#footer{
+		margin: 0 auto;
+	}
+	#footer .about{
+		background: #868686;
+		border-bottom: 1px solid #a0a0a0;
+		height: 40px;
+		line-height: 40px;
+		min-width: 1000px;
+		text-align: center;
+	}
+	#footer .about a{
+		color: #fff;
+		margin: 0 20px;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	#footer .copyright{
+		background: #868686;
+		border-bottom: 1px solid #a0a0a0;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+		text-decoration: none;
+	}
+</style>
+</head>
+
+<body>
+	<div id="header">
+		<div class="hd">
+			<div class="hd_content">
+				<div class="logo">
+					<a href="http://www.thepaper.cn"><img src="images/logo.png" alt="logo" /></a>
+				</div>
+				<div class="fenlei">
+					<ul>
+						<li class="cat"><a href="#">精选</a></li>
+						<li class="cat"><a href="#">时事</a></li>
+						<li class="cat"><a href="#">财经</a></li>
+						<li class="cat"><a href="#">思想</a></li>
+						<li class="cat"><a class="chacked" href="#">生活</a></li>
+						<li class="cat"><a href="#">订阅</a></li>
+						<li class="cat"><a class="bq" href="#">问吧<span></span></a></li>
+					</ul>
+				</div>
+				<div class="zhuce">
+					<a href="#">爆料</a>
+					<a href="#">注册</a>
+					<a href="#">登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main_box">
+		<div class="contont">
+			<!-- 文章指向标签 -->
+			<div class="news_path">
+				<a href="#">首页</a> > <a href="#">运动家</a>
+			</div>
+			<!-- 文章标题 -->
+			<div class="news_title">
+				<a href="#"><h1>姚明今天做客澎湃问吧，聊聊特奥聊聊篮球</h1></a>
+			</div>
+			<!-- 文章发布时间及来源信息 -->
+			<div class="news_about">
+				<p>澎湃问吧讯</p>
+				<p>2015-06-12 09:52 来自 运动家</p>
+			</div>
+			<!-- 文章正文部分 -->
+			<div class="news_text">
+				<div class="pic"><img src="images/yaoming.jpg" alt="姚明" /></div>
+				<span style="color: rgb(128, 128, 128);">姚明。 张新燕 澎湃资料</span>
+				<p class="p1">今天（6月12日），澎湃问吧迎来了一位巨星——姚明。</p>
+				<p>说起“小巨人”姚明，我们并不陌生。他曾效力于美职篮休斯顿火箭队，2003年至2008年入选全明星阵容。他也曾是男篮国家队的灵魂支柱，率队进入奥运会前八。</p>
+				<p>退役后，姚明转型从商，成为上海东方篮球俱乐部的董事长，成立姚家族葡萄酒酒业公司，创立姚基金等等</p>
+				<p>但姚明目前更重要的身份，是国际特殊奥林匹克运动会董事及全球形象大使。2012年12月，他首次正式以特奥董事身份，在上海出席特奥融合慈善筹款晚宴，当晚募得200多万元。除此之外，他还积极参与关于特奥方面的公益活动，他表示，特奥事业更需要持之以恒的参与精神</p>
+				<p>姚明为何热衷于特奥事业？参与其中又有什么感受？你有关于篮球的问题？快来提问吧。点击新闻标题下的相关链接：“[话题]我是姚明,关于国际特殊奥林匹克运动会的问题,问我吧!”即可进入问吧，参与互动。</p>
+			</div>
+			<!-- 文章结尾部分 -->
+			<div class="news_jw">
+				<div class="news_jw_contont">
+					<div class="news_nr">
+						<div class="news_bq">运动</div>
+						<div class="news_ms">我是姚明,关于国际特殊奥林匹克运动会以及篮球的问题,问我吧!</div>
+					</div>
+					<div class="news_info">
+						<div class="yaom">
+							<div class="yaom_photo"></div>
+							<span class="u_name">姚明 /</span>
+							<span>1天前</span>
+							<span class="zan">355</span>
+							<span>进行中……</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 录入编辑 -->
+			<div class="news_editor">
+				录入编辑：沈文迪
+				<span>澎湃新闻报料：4009-20-4009   澎湃新闻，未经授权不得转载</span>
+			</div>
+			<!-- 关键词 -->
+			<div class="news_keywords">关键词 >> 姚明,澎湃问吧</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="about">
+			<a href="#">关于澎湃</a>
+			<a href="#">在澎湃工作</a>
+			<a href="#">联系我们</a>
+			<a href="#">版权声明</a>
+			<a href="#">澎湃广告</a>
+			<a href="#">友情链接</a>
+		</div>
+		<div class="copyright">Copyright 2014 The Paper All rights reserved.上海东方报业有限公司 | 沪ICP备14003370号 | 互联网新闻信息服务许可证：3112014002  </div>
+	</div>
+</body>
+</html>

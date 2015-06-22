@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<style type="text/css">
+	/*1、让1-10号p标签变红色，大小20像素（用父子选择器）*/
+	#hd p{
+		font-size: 20px;
+		color: red;
+	}
+	/*2、让12 13 15号p标签变蓝色，大小30像素(用交叉或class选择器)*/
+	.p_blue{
+		font-size: 30px;
+		color: blue;
+	}
+	/*或者*/
+	p.p_blue{
+		font-size: 30px;
+		color: blue;
+	}
+	/*3、让class是hd的元素变黄色，大小22像素*/
+	#hd .hd{
+		font-size: 22px;
+		color: yellow;
+	}
+	/*4、让h4标签变黑色，大小25像素（用子代选择器）*/
+	div h4{
+		font-size: 25px;
+		color: #000;
+	}
+	/*5、让21 22 23p标签变橙色，大小31像素（不能用class选择器）*/
+
+	#houdunwang div p{
+		font-size: 31px;
+		color: orange;
+	}
+</style>
+<body>
+
+<p>我们也是p标签-11</p>
+<p class="p_blue">我们也是p标签-12</p>
+<p class="p_blue">我们也是p标签-13</p>
+<p>我们也是p标签-14</p>
+<p class="p_blue">我们也是p标签-15</p>
+
+
+<div id="hd">
+	<p>我们是p标签1</p>
+	<p class="hd">我们是p标签2</p>
+	<p>我们是p标签3</p>
+	<p>我们是p标签4 <span>我们是span标签</span></p>
+	<p>我们是p标签5</p>
+	<p>我们是p标签6</p>
+	<p class="hd">我们是p标签7 <span>我们是span标签</span></p>
+	<p>我们是p标签8</p>
+	<p>我们是p标签9 <span>我们是span标签</span></p>
+	<p>我们是p标签10</p>
+	<div>
+		<h4>我们是h4-1</h4>
+		<h4>我们是h4-2</h4>
+		<h4>我们是h4-3</h4>
+		<h4>我们是h4-4</h4>
+		<h4>我们是h4-5</h4>
+	</div>
+</div>
+
+<div id="houdunwang">
+	<p>我们是p标签</p>
+	<p>我们是p标签</p>
+	<p>我们是p标签</p>
+	<p>我们是p标签</p>
+	<p>我们是p标签</p>
+	<div>
+		<p>我们也是p标签21</p>
+		<p>我们也是p标签22</p>
+		<p>我们也是p标签23</p>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

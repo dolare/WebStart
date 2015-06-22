@@ -1,0 +1,52 @@
+*{
+	background: #ffe;
+}
+
+div{
+	display: block;
+}
+
+h2{
+	letter-spacing: 20px;
+}
+
+ul.start{
+	text-align: center;
+}
+ul.wenti{
+	color: red;
+	font-size: 20px;
+	font-style: italic;
+	line-height: 2em;
+}
+
+.kecheng{
+	width: 800px;
+	height: 600px;
+	background: #eee;
+}
+
+p.jieshao{
+	border: 4px solid blue;
+	text-align: center;
+}
+
+
+
+.frame{
+	width: 940px;
+	height: 200px;
+	background: #eee;
+}
+
+.large_text{
+	font-size: 24px;
+	line-height: 31px;
+	color: #232323;
+	font-family: 宋体；
+
+}
+
+#course{
+	text-decoration: line-through;;
+}

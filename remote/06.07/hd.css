@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('base.css');
+
+
+li{
+    color:yellow;
+}
+
+/*id选择器*/
+#two{
+    color:red;
+}
+
+/*class选择器*/
+.hd{
+    
+}
+
+/*交叉选择器*/
+li.hd{
+    
+}
+
+/*子代选择器有空格*/
+li span{
+
+}

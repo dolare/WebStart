@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿美团网</title>
+<style type="text/css">
+	/*全局css-------------------------------*/
+	*{
+		margin: 0 auto;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	i{
+		font-style: normal;
+	}
+	/*头部header-------------------------------*/
+	/*顶部用户信息*/
+	#user_box{
+		margin: 0 auto;
+		background: #f9f9f9;
+		border-top: 1px solid #DDDDDD;
+		border-bottom: 1px solid #DDDDDD;
+	}
+	#user_box .user_info{
+		margin: 0 auto;
+		width: 1170px;
+		height: 30px;
+
+	}
+	/*顶部左侧信息区*/
+	#user_box .user_info ul{
+		float: left;
+		padding: 0;
+	}
+	#user_box .user_info ul li{
+		float: left;
+		height: 12px;
+		list-style: none;
+	}
+	#user_box .user_info ul li a{
+		color: #666;
+		font-size: 12px;
+		font-family: 微软雅黑;
+		text-decoration: none;
+	}
+	
+	/*收藏按钮*/
+	#user_box .user_info .sc{
+		height: 30px;
+		line-height: 30px;
+		float: left;
+		padding-right: 8px;
+	}
+	#user_box .user_info .sc a{
+		width: 50px;
+		height: 30px;
+		line-height: 30px;
+		display: block;
+		float: left;
+		background: url(images/xing01.png) no-repeat left 8px;
+		padding-left: 18px;
+	}
+	#user_box .user_info .sc a:hover{
+		background: url(images/xing02.png) no-repeat left 8px;
+	}
+	/*登录按钮*/
+	#user_box .user_info .dl{
+		height: 30px;
+		line-height: 30px;
+		float: left;
+	}
+	#user_box .user_info .dl a{
+		height: 30px;
+		line-height: 30px;
+		float: left;
+		padding: 0 5px 0 10px;
+		color: #f76120;
+	}
+	/*注册按钮*/
+	#user_box .user_info .zc{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+	}
+	#user_box .user_info .zc a{
+		padding:0 10px;
+		border-right: 1px solid #ddd;
+	}
+	/*手机按钮*/
+	#user_box .user_info .sj{
+		height: 30px;
+		line-height: 30px;
+		float: left;
+		padding-left: 10px;
+	}
+	#user_box .user_info .sj a{
+		width: 80px;
+		height: 30px;
+		background: url(images/sj01.png) no-repeat 0 9px;
+		display: block;
+		float: left;
+		line-height: 30px;
+		padding:0 12px;
+	}
+	#user_box .user_info .sj a:hover{
+		background: url(images/sj02.png) no-repeat 0 9px;
+		color: #2BB8AA;
+	}
+	/*顶部右侧信息*/
+	#user_box .info_right{
+		float: right;
+	}
+	/*我的订单*/
+	#user_box .info_right .dd{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 8px;
+	}
+	/*我的美团*/
+	#user_box .info_right .mt{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .mt a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		
+	}
+	/*最近浏览*/
+	#user_box .info_right .ll{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .ll a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		border-left: 1px solid #ddd;
+	}
+	/*购物车*/
+	#user_box .info_right .gwc{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .gwc a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		border-left: 1px solid #ddd;
+	}
+	#user_box .info_right .gwc i{
+		width: 12px;
+		height: 10px;
+		display: inline-block;
+		background: url(images/gwc.png) no-repeat 0 0;
+		padding-right: 8px
+	}
+	#user_box .info_right .gwc span{
+		padding: 0 2px;
+		color: #f76120;
+	}
+	/*联系客服*/
+	#user_box .info_right .kf{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .kf a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		border-left: 1px solid #ddd;
+	}
+	/*商家*/
+	#user_box .info_right .zg{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .zg a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		border-left: 1px solid #ddd;
+	}
+	/*更多按钮*/
+	#user_box .info_right .more{
+		height: 30px;
+		line-height: 28px;
+		float: left;
+		padding-right: 10px;
+		
+	}
+	#user_box .info_right .more a{
+		background: url(images/ico01.png) no-repeat right 8px;
+		padding: 0 12px;
+		border-left: 1px solid #ddd;
+	}
+	/*伪类效果*/
+	#user_box .user_info ul li a:hover{
+		text-decoration: underline;
+	}
+	#user_box .info_right .mt a:hover,
+	#user_box .info_right .ll a:hover,
+	#user_box .info_right .gwc a:hover,
+	#user_box .info_right .kf a:hover,
+	#user_box .info_right .zg a:hover,
+	#user_box .info_right .more a:hover{
+		background: url(images/ico02.png) no-repeat right 8px;
+	}
+
+	/*顶部广告部分*/
+	#ad_box{
+		margin: 0 auto;
+	}
+	#ad_box .ads{
+		width: 1170px;
+		height: 60px;
+	}
+	/*banner部分--------------------------------------*/
+	#banner_box{
+		margin: 0 auto;
+	}
+	#banner_box .banner{
+		width: 1170px;
+		height: 105px;
+	}
+	#banner_box .banner a{
+		text-decoration: none;
+	}
+	/*logo*/
+	#banner_box .banner .cstg{
+		width: 82px;
+		height: 54px;
+		display: block;
+		float: left;
+		margin-top: 21px;
+		overflow: hidden;
+		text-indent: -300px;
+		background: url(images/logo.png) no-repeat 0 0;
+	}
+	/*城市*/
+	#banner_box .banner .city_box{
+		width: 123px;
+		height: 54px;
+		float: left;
+		margin: 24px 0 0 10px;
+	}
+	#banner_box .banner .city_box h2{
+		padding-bottom: 5px;
+	}
+	#banner_box .banner .city_box .cs{
+		color: #000;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	#banner_box .banner .city_box .qhcs{
+		background: #fff none repeat scroll 0 0;
+    	border: 1px solid #eee;
+    	color: #999;
+    	font-size: 12px;
+    	line-height: 20px;
+    	padding: 2px 5px;
+	}
+
+	/*标志部分*/
+	#banner_box .banner .biaozhi{
+		width: 172px;
+		height: 39px;
+		float: right;
+		margin-top: 33px;
+	}
+	/*搜索部分*/
+	#banner_box .banner .search{
+		position: relative;
+		width: 490px;
+		height: 70px;
+		margin-left: 120px;
+		margin-top: 21px;
+		float: left;
+	}
+	#banner_box .banner .search .search_form .search_k{
+		width: 399px;
+		height: 26px;
+		padding: 6px 5px;
+		border: 2px #2BB8AA solid;
+		float: left;
+		color: #666;
+		font-size: 14px;
+		font-family: 微软雅黑;
+		padding-left: 10px;
+	}
+	#banner_box .banner .search .search_form .submit{
+		   background: #2bb8aa none repeat scroll 0 0;
+    		border: medium none;
+    		border-radius: 0;
+    		color: #fff;
+    		cursor: pointer;
+    		float: left;
+    		height: 42px;
+    		line-height: 35px;
+    		margin: 0;
+    		width: 65px;
+    		font-size: 14px;
+		font-family: 微软雅黑;
+	}
+	/*关键字*/
+	#banner_box .banner .search .keywords{
+		float: left;
+		margin-top: 8px;
+		font-size: 12px;
+	}
+	#banner_box .banner .search .key{
+		border-right: medium none;
+    	color: #666;
+    	display: inline-block;
+    	height: 18px;
+    	max-width: 72px;
+    	overflow: hidden;
+    	padding: 0 10px;
+    	text-align: center;
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+    	padding-left: 0px;
+	}
+	/*导航部分*/
+	#nav_box{
+		margin: 0 auto;	
+	}
+	#nav_box .nav{
+		width: 1170px;
+		height: 40px;
+		background: #2BB8AA;
+	}
+	/*全部分类*/
+	#nav_box .nav .all_cate_left{
+		width: 245px;
+		height: 40px;
+		float: left;
+		background: url(images/all.png) repeat 0 0;
+
+	}
+	#nav_box .nav .all_cate_left a{
+		font-family: 微软雅黑;
+		font-size: 16px;
+		font-weight: 400;
+		color: #fff;
+		height: 21px;
+		display: block;
+		float: left;
+		line-height: 21px;
+		padding: 10px 18px 9px;
+		text-decoration: none;
+	}
+	/*右侧小分类*/
+	#nav_box .nav .navs{
+		width: 925px;
+		height: 40px;
+		float: left;
+	}
+	#nav_box .nav .navs ul{
+		padding: 0;
+	}
+	#nav_box .nav .navs li{
+		float: left;
+		list-style: none;
+	}
+	#nav_box .nav .navs li a{
+		font-family: 微软雅黑;
+		min-width: 54px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+		height: 21px;
+		display: block;
+		float: left;
+		line-height: 21px;
+		padding: 10px 18px 9px;
+		text-decoration: none;
+		transition:background-color 0.15s linear 0s;
+	}
+	#nav_box .nav .navs li a:hover{
+		background: #00c3b0;
+		transition:background-color 0.15s linear 0s;
+	}
+	
+</style>
+</head>
+
+<body>
+	<!-- 头部 -->
+	<div id="header">
+		<!-- 用户信息 -->
+		<div id="user_box">
+			<div class="user_info">
+				<div class="info_left">
+					<ul class="ul_left">
+						<li class="sc"><a href="#">收藏美团</a></li>
+						<li class="dl"><a href="#">登录</a></li>
+						<li class="zc"><a href="#">注册</a></li>
+						<li class="sj"><a href="#">手机美团</a></li>
+					</ul>
+				</div>
+				<div class="info_right">
+					<ul class="ul_right">
+						<li class="dd"><a href="#">我的订单</a></li>
+						<li class="mt"><a href="#">我的美团</a></li>
+						<li class="ll"><a href="#">最近浏览</a></li>
+						<li class="gwc"><a href="#"><i></i>购物车<span>0</span>件</a></li>
+						<li class="kf"><a href="#">联系客服</a></li>
+						<li class="zg"><a href="#">我是商家</a></li>
+						<li class="more"><a href="#">更多</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 顶部广告部分 -->
+		<div id="ad_box">
+			<div class="ads">
+				<a href="#"><img src="images/ad.jpg" alt="" /></a>
+			</div>
+		</div>
+		<!-- 顶部banner部分 -->
+		<div id="banner_box">
+			<div class="banner">
+				<!-- LOGO -->
+				<h1 class="logo"><a class="cstg" href="#">武汉团购</a></h1>
+				<!-- 城市 -->
+				<div class="city_box">
+					<h2><a class="cs" href="#">武汉</a></h2>
+					<a class="qhcs" href="#">切换城市</a>
+				</div>
+				<!-- 搜索 -->
+				<div class="search">
+					<form class="search_form" action="#" method="post">
+						<input class="search_k"  type="text" value="请输入商品名称、地址等" />
+						<input class="submit" type="submit" value="搜索" />
+					</form>
+					<div class="keywords">
+						<a href="#" class="key">洗车</a>
+						<a href="#" class="key">生日蛋糕</a>
+						<a href="#" class="key">自助火锅</a>
+						<a href="#" class="key">万达</a>
+						<a href="#" class="key">美发</a>
+						<a href="#" class="key">鲜花</a>
+						<a href="#" class="key">健身</a>
+						<a href="#" class="key">木兰草原</a>
+					</div>
+				</div>	
+				<!-- 标志 -->
+				<div class="biaozhi">
+					<a href="#">
+						<img src="images/biaozhi.png" alt="标志" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 导航部分 -->
+		<div id="nav_box">
+			<div class="nav">
+				<div class="all_cate_left"><a href="#">全部分类</a></div>
+				<div class="navs">
+					<ul>
+						<li class="cates"><a href="#">首页</a></li>
+						<li class="cates"><a href="#">今日新单</a></li>
+						<li class="cates"><a href="#">身边团购</a></li>
+						<li class="cates"><a href="#">购物</a></li>
+						<li class="cates"><a href="#">身边外卖</a></li>
+						<li class="cates"><a href="#">名店抢购</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主要内容部分 -->
+	<div id="main_box">
+		<div class="main_content">
+			<div class="category"></div>
+		</div>
+	</div>
+</body>
+</html>

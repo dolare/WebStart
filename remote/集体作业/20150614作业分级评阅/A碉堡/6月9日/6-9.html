@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字样式练习</title>
+	<style type="text/css">
+		/*全局reset*/
+		*{
+			padding:0;
+			margin:0;
+			font-family:微软雅黑;/*字体*/
+			font-size:12px;/*文字大小*/
+			text-indent:2em;/*段落首字缩进*/
+		}
+		header{
+			width:650px;
+			height:50px;
+			background: black;
+			color:white;
+			line-height:50px;/*设置行高*/
+			font-variant: small-caps;/*这个似乎基本用不上*/
+			text-align:center;/*字体居中*/
+		}
+		a{
+			color:green;
+			text-decoration: none;/*下划线的样式*/
+		}
+		a:hover{
+			color:red;
+			font-size:24px;
+			font-weight:700;/*字体加粗*/
+		}
+		ul{
+			list-style:none;
+			padding:10px;
+			width:650px;
+			height:250px;
+		}
+		ul li{
+			position: relative;
+			width:210px;
+			height:250px;
+			border:1px solid black;
+			float:left;
+		}
+		ul li img{
+			width:200px;
+			height:200px;
+			position: absolute;
+			left:5px;
+			top:10px;
+		}
+		ul li p{
+			width:200px;
+			height:50px;
+			position:absolute;
+			top:220px;
+			left:5px;
+		}
+		ul li p span.tmprice{
+			text-decoration:line-through;/*横线的样式：上中下无*/
+			color:grey;
+			font-size:16px;
+		}
+		ul li p span.bdprice{
+			text-decoration:blink;
+			color:red;
+			font-size:16px;
+		}
+		article section{
+			width:650px;
+			line-height:20px;
+			margin-top:10px;
+		}
+		article hr{
+			width:650px;
+			color:red;
+		}
+		article hgroup{
+			font-size:16px;
+			font-weight: 700;
+			text-indent: 0;
+			color:red;
+			margin-top:10px;
+		}
+		footer{
+			margin-top:10px;
+			width:650px;
+			height:60px;
+			background: black;
+			font-size:30px;
+			line-height:60px;
+			text-align:center;
+			color:white;
+			font-weight:700;
+			text-shadow:2px 2px 2px red;/*文字阴影*/
+		}
+	</style>
+	<script type="text/javascript">
+		function cf(){
+			if(confirm("恭喜你，中奖了！领奖吗？")){alert("北京希尔顿免费吃住一个月，挂我的账就行了。");}else{alert("奖都不要啊，真牛！");}
+		}
+	</script>
+</head>
+<body>
+	<header>
+		www.houdunwang.com!
+	</header>
+	<a href="#" onclick="cf();return false;">
+		点这里领奖
+	</a>
+	<span>
+		欢迎来重庆玩耍，记得不要坐船！
+	</span>
+	<ul>
+		<li>
+			<img src="1.jpg" alt="狮威特原汁机">
+			<p>
+				天猫价: <span class="tmprice">469</span>；本店价: <span class="bdprice">329</span>
+			</p>
+		</li>
+		<li>
+			<img src="1.jpg" alt="狮威特原汁机">
+			<p>
+				天猫价: <span class="tmprice">469</span>；本店价: <span class="bdprice">329</span>
+			</p>
+		</li>
+		<li>
+			<img src="1.jpg" alt="狮威特原汁机">
+			<p>
+				天猫价: <span class="tmprice">469</span>；本店价: <span class="bdprice">329</span>
+			</p>
+		</li>
+	</ul>
+	<article>
+		<hgroup>低速螺旋挤压</hgroup>
+		<hr>
+		<section>原汁机的低速螺旋挤压技术，挤压转速越低越好，一般原汁机每分钟转速75转左右，像挤毛巾一样将果汁慢慢挤出来，不破坏水果细胞结构，水果营养得以保全。而且低速出汁不会产生高热，也避免了果汁受热氧化的问题。</section>
+		<hgroup>卧式结构</hgroup>
+		<hr>
+		<section>原汁机的紧凑卧式结构，汁渣分离更科学，也可以有效减少出汁过程中，果汁与空气的接触，减缓果汁自然氧化的速度。</section>
+		<hgroup>采用精瓷螺杆</hgroup>
+		<hr>
+		<section>原汁机的挤汁部件采用创新的精瓷螺杆，经过1200度高温，17道工序锻造而成，坚实耐用，不染色，不易滋生细菌。</section>
+	</article>
+	<footer>
+		后盾网，人人做后盾！
+	</footer>
+</body>
+</html>

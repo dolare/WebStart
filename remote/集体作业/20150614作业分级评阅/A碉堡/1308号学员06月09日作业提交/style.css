@@ -1,0 +1,79 @@
+/*初始化默认样式开始*/
+body,div,p,span,h1,h2,h3{
+	margin:0;
+	padding:0;
+}
+body {
+	font-size:14px;
+	font-family:"微软雅黑", "宋体", Microsoft YaHei, SimSun, Malgun Gothic, DotumChe, GulimChe, Arial;
+	background: #f5f5f5;
+	color:#1F1F1F
+}
+h1,h2,h3{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #2bbbfc;
+}
+h1{
+	font-size:40px;
+}
+h2{
+	font-size: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+h3{
+	border-bottom: none;
+	font-size: 20px;
+}
+sup{
+	color:#136ec2;
+}
+li{
+	line-height: 2em;
+}
+a{
+	text-decoration: none;
+	color:#136ec2;
+	font-size: 14px;
+}
+span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: #136ec2;
+	color: #fff;
+	line-height: 30px;
+	font-size:20px;
+	text-align: center;
+	font-weight: normal;
+	margin-right: 4px;
+}
+dt, dd{
+	text-indent: 2em;
+	line-height: 2em;
+}
+dd{
+	text-indent: 0
+}
+/*初始化默认样式结束*/
+
+/*外层包裹DIV样式开始*/
+#obaor{
+	width:960px;
+	margin:10px auto;
+	border:1px solid #2bbbfc;
+	padding: 10px 20px;
+	background: #fff;
+}
+/*外层包裹DIV样式结束*/
+
+/*段落样式开始*/
+.text{
+	text-indent: 2em;
+	padding:8px 0 4px 0;
+	line-height: 1.6em;
+}
+.weight{
+	font-weight: 700;
+}
+/*段落样式结束*/

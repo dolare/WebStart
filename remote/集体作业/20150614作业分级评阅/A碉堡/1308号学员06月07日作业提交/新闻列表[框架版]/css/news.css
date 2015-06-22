@@ -1,0 +1,59 @@
+/* CSS Document */
+/*框架右侧内容区域css样式*/
+@import url(base.css);
+.right_wrap{
+	width:100%;
+	margin:0 auto;	
+}
+.news{
+	width:80%;	
+}
+li{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #ccc;	
+}
+a{
+	color:#333;
+	text-decoration:none;	
+}
+li strong{
+	display:block;
+	float:left;
+	width:100px;
+	text-align:center;
+	font-weight:normal;
+}
+li span{
+	display:block;
+	float:right;
+	width:200px;
+	text-align:center;	
+}
+li a:hover{
+	color:#398ccc
+}
+.news .title{
+	background:#ccc;	
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.page{
+	width:70%;
+	padding:50px 0 0 300px;
+}
+.page a{
+	float: left;
+	display:inline-block;
+	width:30px;
+	height: 30px;
+	line-height: 30px;
+	background: #ccc;
+	margin-right: 10px;
+	text-align: center;
+}
+.page a.current{
+	background:#398ccc;
+}
+

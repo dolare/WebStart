@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin: 0;
+		font-size: 14px; 
+		color:#666;
+	}
+	ul li{
+		list-style: none;
+	}
+	a{
+		font-size: 14px;
+		 color:#666;
+		 text-decoration: none;
+		}
+	#box{
+		width:1190px;
+/*		border:1px solid blue;*/
+		margin: 0 auto;
+	}
+	#box .top{
+		width:1190px;
+		height:40px;
+		line-height: 40px;
+
+		margin-top: 10px;
+	}
+	#box .top a{
+		display: block;
+		 line-height: 18px;
+		 float: left;
+		 height:18px;
+	}
+	#box .top span{
+		display: block; 
+		line-height: 18px;
+		float: left;
+		height:18px;
+	}
+	#box .top a.meide{
+		display: block;
+		padding: 0px 20px 0px 8px ;
+		position: relative;
+		border:1px solid #ddd;
+		height:18px; 
+		line-height: 18px;
+	}
+	#box .top .meide:hover,#box .top a:hover{
+			color:#f70;}
+	#box .top a.meide b{
+		display: block;
+		width:8px;
+		height: 4px;
+		background: url(img/icons-2.png) no-repeat 0px 0px;
+		position: absolute;
+		top:7px;
+		right:6px;
+	}
+	#box .zhuti{width:1189px;}
+	#box .zhuti .left{
+		width:400px;
+		height:930px;
+		/*border: 1px solid red;*/
+		position: relative;
+		 float: left;
+	}
+	#box .zhuti .left p.tukuang {
+		width:300px;
+		height:300px;
+		position: absolute;
+		top:0px;left:0px;
+		padding: 50px;/*border: 1px solid red;*/
+	}
+	#box .zhuti .left p.tukuang img{
+		width:300px;
+		height:300px;
+	}
+	#box .zhuti .left ul{
+		width:360px;
+		height:60px;
+		position: absolute;
+		top:400px;
+		left:20px;
+	}	
+	#box .zhuti .left ul li{
+		width:60px;
+		height:60px;
+		float: left;
+	}
+	#box .zhuti .left ul li img{
+		width:60px;
+		height:60px;
+		border: 1px solid #ddd;
+	}
+	#box .zhuti .left ul li.bj{
+		width:30px;
+		height:60px; 
+		position: relative;
+	}
+	#box .zhuti .left ul li.bj span.left1{
+		width:12px;
+		height:20px;
+		display:block;
+		background:url(img/icons-2.png) no-repeat -17px -24px;
+		position:absolute;
+		top:20px; 
+		left:4px;
+	}
+	#box .zhuti .left ul li.bj span.right1{
+		width:12px;
+		height:20px;
+		display:block;
+		background:url(img/icons-2.png) no-repeat -39px -24px;
+		position:absolute;
+		top:20px; 
+		right:4px;
+	}
+	#box .zhuti .left .bianhao{
+		font-size: 12px; 
+		color: #ccc; 
+		position: absolute;
+		top:460px;
+		left:0px;
+		height:40px; 
+		line-height: 40px;
+	} 
+	#box .zhuti .right{
+		width:785px;
+		height:900px;
+		/*border: 1px solid blue;*/
+		float:right; 
+		position: relative;
+	}
+	#box .zhuti .right h2{
+		font-size: 16px; 
+		font-weight: 700; 
+		line-height: 1.5em;
+		margin-top: 10px; 
+		margin-left: 10px;
+	}
+	#box .zhuti .right .title{
+		font-size: 14px; 
+		font-weight: 400; 
+		line-height: 1.5em;
+		margin-top: 10px; 
+		margin-left: 10px; 
+		color: #f70;
+	}
+	#box .zhuti .right .title a{color: #2272c8;	}
+	#box .zhuti .right .title a:hover{
+		color: #f70;	
+		text-decoration: underline;
+	}
+	#box .zhuti .right .shop{
+		width:788px;
+		height:784px;
+		position: absolute;
+		top:108px;background:url(img/repeat.png) repeat-x;
+			}
+	#box .zhuti .right .shop .shop-nei{
+		width:588px;
+		height:127px;
+		/*border: 1px solid red;*/ 
+		position: relative;
+		color:#fff;
+	}
+	#box .zhuti .right .shop .shop-nei .cankao{
+		position: absolute;
+		top:19px;
+		left:19px;
+		font-size: 12px;
+		font-weight: 400;
+		color:#fff; 
+		width:300px; /*border: 1px solid red;*/
+		line-height: 21px;
+	}
+	#box .zhuti .right .shop .shop-nei .cankao span{float: left;}
+	#box .zhuti .right .shop .shop-nei .cankao .span1{
+		letter-spacing: 0.5em;
+		font-size: 12px;
+		font-weight: 400;
+		color:#fff;
+	}
+	#box .zhuti .right .shop .shop-nei .cankao .span2{
+		font-size: 14px;
+		font-weight: 700px;
+		text-decoration: line-through;
+		color:#fff;
+		margin-left: 22px;
+		display: block; 
+		}
+	#box .zhuti .right .shop .shop-nei .yigou{
+		position: absolute;
+		top:50px;
+		left:19px;
+		font-weight: 400;
+		color:#fff; 
+		width:300px; /*border: 1px solid red;*/
+	}
+	#box .zhuti .right .shop .shop-nei .yigou span{
+		float: left;
+		line-height: 30px;
+	}
+	#box .zhuti .right .shop .shop-nei .yigou .span3{
+		font-size: 18px;
+		font-weight: 700px; 
+		color:#fff;
+		margin-left: 22px;
+		display: block; 
+		width:115px;/*border:1px solid red;*/
+	}
+	#box .zhuti .right .shop .shop-nei .yigou .span3 b{
+		font-size: 30px;
+		font-weight: 700px; 
+		color:#fff;display: block; 
+		line-height: 30px;
+		float: right; }
+	#box .zhuti .right .shop .shop-nei .yigou .span1{
+		letter-spacing: 0.5em;
+		font-size: 12px;
+		font-weight: 400;
+		color:#fff;}
+	#box .zhuti .right .shop .shop-nei .yigou .span4{
+		font-size: 12px;
+		font-weight: 400px;
+		 color:#fff;
+		 margin-left: 22px;
+		 display: block; 
+		 text-decoration: underline;
+		}
+</style>
+
+</head>
+
+<body>
+	<div id="box">
+		<p class="top">
+			<a href="">首页</a><span>></span>
+			<a href="">厨卫电器 生活电器</a><span>></span>
+			<a href="" class="meide"><b></b>厨卫电器</a><span>></span>
+			<a href="" class="meide"><b></b>热水器</a><span>></span>
+			<a href="" class="meide"><b></b>美的(Midea)</a><span>></span>
+			<span>美的（Midea）电热水器 F50-21S1 储水式热水器 50L</span>
+		</p>
+		<div class="zhuti">
+			<div class="left">
+            	<p class="tukuang"><img src="img/da.jpg" alt="" /></p>			
+				<ul>
+					<li class="bj"><span class="left1"></span></li>
+                	<li><img src="img/1.jpg" alt="" /></li>
+                    <li><img src="img/2.jpg" alt="" /></li>
+                    <li><img src="img/3.jpg" alt="" /></li>
+                    <li><img src="img/4.jpg" alt="" /></li>
+                    <li><img src="img/5.jpg" alt="" /></li>
+                    <li class="bj"><span class="right1"></span></li>
+                </ul>
+                <p class="bianhao">商品编码:121290818 </p>
+			</div>
+			<div class="right">
+				<h2>美的（Midea）电热水器 F50-21S1 储水式热水器 50L</h2>
+				<p class="title"><a href="">更多热水器、净水、小厨宝精品尽在博美店铺，新店开业，五重好礼等你来拿，苏宁采销实力推荐，和苏宁自营一样给力的店铺，点击此处即可进入！</a>  【全网NO.1畅销单品】日销过千台，全五星好评！大功率2100W极速加热，从此沐浴无需等待，可3-4人连续洗浴，性能优于80L热水器！超长保温72小时，全程抑菌管路，为家人的健康保健护航！</p>
+				<div class="shop">
+					<div class="shop-nei">
+						<p class="cankao"><span class="span1">参考价</span><span class="span2">¥ 1027.00</span></p>
+						<p class="yigou"><span class="span1">易购价</span><span class="span3">¥ <b>699.00</b></span><span class="span4">降价通知</span></p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

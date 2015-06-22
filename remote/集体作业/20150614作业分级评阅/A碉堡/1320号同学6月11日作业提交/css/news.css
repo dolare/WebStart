@@ -1,0 +1,172 @@
+@charset "utf-8";
+	/*全局reset*/
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: 微软雅黑;
+	}
+	img{
+		border: 0px;
+	}
+	a{
+		text-decoration: none;
+	}
+	/*全局reset结束*/
+
+	/*正文框架*/
+	#zhengwen{
+		width: 650px;
+		height: auto;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+	/*正文框架结束*/
+	
+	/*表头*/
+	#zhengwen .biaotou{
+		height: 55px;
+		width: 650px;
+		padding-bottom: 4px;
+		border-bottom: 1px solid #000000;
+	}
+	#zhengwen .biaotou img{
+		float: left;
+	}
+	#zhengwen .biaotou span{
+		display: block;
+		float: left;
+		height: 55px;
+		line-height: 55px;
+		margin-left: 11px;
+	}
+	#zhengwen .biaotou span a{
+		font-size:12px;
+		color:#333;
+	}
+	/*表头结束*/
+
+	/*标题*/
+	#zhengwen .biaoti{
+		height: 97px;
+		border-bottom: 1px dotted #CCCCCC;
+		text-align: center;
+	}
+	#zhengwen .biaoti h1{
+		font-size: 24px;
+		line-height: 66px;
+		font-family: 宋体;
+		font-weight: 400;
+	}
+	#zhengwen .biaoti p{
+		font-size: 12px;
+		color:#666;
+	}
+	#zhengwen .biaoti p a{
+		color:#666;
+	}
+	/*标题结束*/
+
+	/*内容*/
+	#zhengwen .neirong{
+		width: 637px;
+		height: auto;
+		overflow: hidden;
+	}
+	/*题目*/
+	#zhengwen .neirong h2{
+		width: 637px;
+		height: auto;
+	}
+	#zhengwen .neirong h2 span{
+		width: 637px;
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		margin: 12px 0px;
+		font-size: 16px;
+		text-align: center;
+	}
+	/*题目结束*/
+	/*新闻内容*/
+	#zhengwen .neirong p{
+		height: auto;
+		width: 637px;
+		text-indent: 2em;
+		margin: 12px 0px;
+		font-size: 16px;
+		line-height: 180%;
+		text-align: left;
+	}
+	#zhengwen .neirong .shuming{
+		padding-right: 11px;
+		display: inline-block;
+		float: right;
+		font-size: 14px;
+	}
+	/*新闻内容结束*/
+
+	/*分享*/
+	#zhengwen .fenxiang{
+		margin-top: 37px;
+		width: 320px;
+		height: 19px;
+		line-height: 19px;
+		float: right;
+	}
+	#zhengwen .fenxiang a{
+		display: inline-block;
+		float:right;
+		width:16px;
+		height:16px;
+		margin-top: 3px;
+		margin-right: 10px;
+
+	}
+	#zhengwen .fenxiang a.kongjian{
+		background: url(../images/top_logo.png) no-repeat 0px -234px;
+	}
+	#zhengwen .fenxiang a.weibo{
+		background: url(../images/top_logo.png) no-repeat 0px -270px;
+	}
+	#zhengwen .fenxiang a.weixin{
+		background: url(../images/weixin.png) no-repeat;
+	}
+	#zhengwen .fenxiang span{
+		width: 41px;
+		height: 18px;
+		font-size: 11px;
+		color: #333;
+		font-family: Arial;
+		background: url(../images/count.gif) no-repeat;
+		display: inline-block;
+		float: right;
+		text-align: center;
+		margin-right: 5px;
+	}
+	#zhengwen .fenxiang a.more{
+		background: url(../images/more.png) no-repeat;
+	}
+	/*分享结束*/
+
+	/*版权*/
+	#zhengwen .banquan{
+		width: 650px;
+		clear: both;
+		padding-top: 39px;
+		padding-bottom: 28px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #999999;
+		height: 19px;
+		font-size: 14px;
+	}
+	#zhengwen .banquan a{
+		color: #000;
+	}
+	#zhengwen .banquan span{
+		color: #9A0000;
+		font-weight: 700;
+	}
+	/*版权结束*/
+	/*内容结束*/
+

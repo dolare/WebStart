@@ -1,0 +1,58 @@
+@charset "utf-8";
+	/*全局reset*/
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	a{
+		text-decoration: none;
+		font-family: 微软雅黑;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+		width: 64px;
+	}
+	/*全局reset结束*/
+	#menu{
+		width: 1170px;
+		height: 40px;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+	/*导航左侧*/
+	#menu .left{
+		width: 246px;
+		height: 40px;
+		float: left;
+		background:#1CB19C;
+	}
+	#menu .left span{
+		margin-left: 15px;
+		height: 40px;
+		display: block;
+		line-height: 40px;
+		color: #FFF;
+	}
+	/*导航左侧结束*/
+
+	/*导航右侧*/
+	#menu .right{
+		width: 924px;
+		height: 40px;
+		float: left;
+		background: #2BB8AA;
+	}
+	#menu .right a{
+		display: block;
+		float: left;
+		padding: 10px 18px 8px;
+		text-align: center;
+	}
+	#menu .right a.one{
+		width: 54px;
+	}
+	#menu .right a:hover{
+		background: #00C3B0;
+	}
+	/*导航右侧结束*/
+

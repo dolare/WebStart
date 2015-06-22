@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美团网导航栏</title>
+<style type="text/css">
+	/*通用选择器重置外边距和内边距都为0*/
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    /*#nav样式*/
+    #nav{
+    	margin: 0px auto;
+    	margin-bottom: 0px;
+    	padding: 0;
+    	width: 1170px;
+    	height: 105px;
+    	/*background: #ccc;*/
+    }
+    #nav #nav-n{
+    	width: 1170px;
+    	height: 54px;
+    	/*background: pink;*/
+    	position: relative;
+    	top: 20px;
+    }
+
+    #nav #nav-n #logo{
+    	float: left;
+    }
+    #nav #nav-n #name{
+    	float: left;
+    	height: 49px;
+    	width: 123px;
+    	margin-left: 10px;
+    	/*background: red;*/
+    }
+    #nav #nav-n #name h2{
+    	margin-top: 6px;
+    	font-size: 18px;
+    	font-weight: 700;
+    }
+    #nav #nav-n #name a{
+    	display: block;
+    	border: #ccc;
+    	font-size: 12px;
+    	text-decoration: none;
+    	color: #999999;
+    	border:1px solid #eee;
+    	width: 60px;
+    	text-align: center;
+    	line-height: 20px;
+    }
+    #nav #nav-n #name a:hover{
+    	color: #2bb8aa;
+    }
+	
+	#nav #nav-n #serch{
+		float: left;
+		width: 487px;
+		height:42px;
+		/*background: blue;*/
+		position: relative;
+		margin-left: 120px;
+	}
+	#nav #nav-n #serch #serch-df a{
+		display:block;
+		font-size: 14px;
+		font-weight: 400px;
+		text-decoration: none;
+		line-height: 40px;
+		text-align: center;
+		color: #666;
+	}
+	#nav #nav-n #serch #serch-df{
+		border-top:2px solid #2bb8aa;
+		border-bottom: 2px solid #2bb8aa;
+		border-left: 2px solid #2bb8aa;
+		float: left;
+		width: 48px;
+		height: 40px;
+		/*background: yellow;*/
+	}
+	#nav #nav-n #serch #serch-img{
+		border-top:2px solid #2bb8aa;
+		border-bottom: 2px solid #2bb8aa;
+		width: 15px;
+		height: 40px;
+		float: left;
+		background:url(li4.png) 0 0 repeat;
+	}
+	#nav #nav-n #serch #serch-input{
+		width: 420px;
+		height: 40px;
+		/*background: black;*/
+		float: left;
+		border-top:2px solid #2bb8aa;
+		border-right: 2px solid #2bb8aa;
+		border-bottom: 2px solid #2bb8aa;
+	}
+	#nav #nav-n #serch #serch-input #text{
+		width: 358px;
+		height: 40px;
+		border-top: 0px;
+		border-right: 0px;
+		border-bottom: 0px;
+		border-left: 1px solid #dddddd;
+		font-size: 14px;
+		font-weight: 400px;
+		color: #a9a9a9;
+		outline: none;
+	}
+	#nav #nav-n #serch #serch-input #ss{
+		height: 40px;
+		width: 61px;
+		background: #2bb8aa;
+		border-top: 0px;
+		border-right: 0px;
+		border-bottom: 0px;
+		border-left: 0px;
+		color: #fff;
+		font-size: 14px;
+		
+	}
+	#nav #nav-tu{
+		width: 192px;
+		height: 42px;
+		/*background: red;*/
+		float: right;
+		position: relative;
+		bottom: 28px;
+
+	}
+	#nav #nav-tu img{
+		margin-left: 28px;
+	}
+	#nav #nav-tu a{
+		font-weight: 400;
+		font-size: 12px;
+		text-decoration: none;
+		color: #666;
+		line-height: 18px;
+		padding-left: 20px;
+	}
+	#nav #nav-li{
+		width: 440px;
+		height: 20px;
+		/*background:white;*/
+		float: left;
+		position: relative;
+		top:20px;
+		left: 335px;
+	}
+
+	#nav #nav-li a{
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 20px;
+		padding-right: 20px;
+		text-decoration: none;
+		color: #666;
+
+	}
+	#nav #nav-li a:hover{
+		color: #2bb8aa;
+		text-decoration: underline;
+	}
+	/*导航栏div样式*/
+	#nav-content{
+		margin: 0px auto;
+		width: 1170px;
+		height: 40px;
+		background: #2bb8aa;
+	}
+
+	/*导航栏内a标签样式*/
+	#nav-content a{
+		font-size: 16px;
+		text-decoration:none;
+		color: #fff;
+		display: inline-block;
+		line-height: 40px;
+		background: #2bb8aa;
+		font-weight: 700;
+		padding: 0px 30px 0px 30px;
+	}
+	/*导航栏内a标签覆盖样式*/
+	#nav-content a:hover{
+		background: #00c3b0; /*设置背景颜色*/
+	}
+
+	/*导航栏内id为ALL的样式*/
+	#nav-content #all{
+		font-weight: 300;
+		padding-left: 14px;
+		padding-right: 165px;
+	}
+</style>
+
+
+</head>
+
+<body>
+<div id="nav">
+	<div id="nav-n">
+		<div id="logo">
+			<a href="#"><img src="logo.png" alt="美团网" /></a>
+		</div>
+		<div id="name">
+			<h2>北京</h2>
+			<a href="#">切换城市</a>
+		</div>
+		<div id="serch">
+			<div id="serch-df">
+				<a href="#">团购</a>
+			</div>
+			<div id="serch-img">
+			</div>
+			<div id="serch-input">
+				<input type="text" id="text" value="请输入商品名称、地址等" /><input type="button" id="ss" value="搜索" />
+				
+			</div>
+			
+		</div>
+	</div>
+	<div id="nav-tu">
+		<img src="li1.png" alt="" /><img src="li2.png" alt="" /><img src="li3.png" alt="" />
+		<a href="">随时退</a><a href="">不满意免单</a><a href="">过期退</a>
+	</div>
+	<div id="nav-li"><a href="#">自助餐</a><a href="#">健身</a><a href="#">生日蛋糕免</a><a href="#">宾馆</a><a href="#">理发</a><a href="#">火锅</a><a href="#">电影票</a><a href="#">个人写真</a></div>
+</div>
+<div id="nav-content">
+	<a href="#" id="all">全部分类</a><a href="#">首页</a><a href="#">今日新单</a><a href="#">身边团购</a><a href="#">购物</a><a href="#">身边外卖</a><a href="#">名店抢购</a>   
+</div>
+</body>
+</html>

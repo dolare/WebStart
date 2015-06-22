@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻页面仿写</title>
+	<style type="text/css">
+		/*全局reset*/
+		*{
+			margin:0;
+			padding:0;
+			border:none;
+		}
+		a{
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		header{
+			width:100%;
+			height:102px;
+			border-bottom:1px dashed #e7e7e7;
+		}
+		header nav{
+			width:1000px;
+			height:14px;
+			height:;
+			margin:24px auto 0;
+		}
+		header nav a{
+			width:42px;
+			height:14px;
+			font-size:12px;
+			border-right:1px solid #e5e5e5;
+			font-family:simsun;
+			color:#575656;
+			line-height:14px;
+			text-align:center;
+			display:block;
+			float:left;
+		}
+		header nav a.nav4{
+			width:64px;
+		}
+		/*logo部分框架*/
+		header div.top{
+			width:1000px;
+			height:50px;
+			margin:0 auto;
+			margin-top:30px;
+			position:relative;
+		}
+		header div.top a#logo{
+			width:107px;
+			height:50px;
+			display:block;
+			background:yellow;
+		}
+		header div.top a#logo img{
+			width:107px;
+			height:50px;
+			border:none;
+		}
+		header div.top p{
+			width:200px;
+			height:14px;
+			font-size:14px;
+			line-height:14px;
+			position:absolute;
+			left:130px;
+			top:19px;		
+		}
+		header div.top p a{
+			color:#575657;
+		}
+		header div.top form{
+			width:220px;
+			height:26px;
+			position: absolute;
+			right:0;
+			bottom:10px;
+		}
+		header div.top form input#search{
+			width:180px;
+			height:24px;
+			float:left;
+			border:1px solid #ccc;
+		}
+		header div.top form a{
+			width:35px;
+			height:26px;
+			background-image:url(./images/sy.jpg);
+			float:left;
+			display:block;
+		}
+		header div.top form a img{
+			border:none;
+		}
+		/*主体内容*/
+		hr{
+			width:1000px;
+			height:4px;
+			margin:14px auto;
+			border:none;
+			background:#ebebeb;
+		}
+		/*正文部分article*/
+		article{
+			width:1000px;
+			margin:35px auto;
+		}
+		article div#main{
+			width:650px;
+			float:left;
+			font-family:微软雅黑;
+		}
+		article div#main h1{
+			font-size:22px;
+			color:#242424;
+			text-align:left;
+			font-weight:400;
+		}
+		article div#main p.lujin{
+			width:650px;
+			height:48px;
+			border-bottom:1px dashed #242424;
+			line-height:48px;
+			font-size:14px;
+			margin-bottom:35px;
+		}
+		article div#main p.lujin span{			
+			color:#242424;
+		}
+		article div#main p.lujin a{
+			color:#28394B;
+		}
+		article div#main section{
+			width:650px;
+			margin-top:15px;
+			line-height:32px;
+			font-size:16px;
+			text-indent:2em;
+		}
+		article div#main section#bianji{
+			margin-top:30px;
+			text-align:right;
+		} 
+		article div#main p#key{
+			width:650px;
+			height:20px;
+			margin-top:10px;
+			position:relative;
+		}
+		article div#main p#key span{
+			font-size:14px;
+			color:#242424;
+			line-height: 20px;
+		}
+		article div#main p#key img{
+			width:23px;
+			height:20px;
+			display:block;
+			position:absolute;
+			top:0;
+			right:80px;
+		}
+		article div#main p#key a{
+			display:block;
+			float:right;
+			margin-right:30px;
+			color:#283948;
+			font-size:12px;
+			line-height:20px;
+		}
+		/*相关阅读*/
+		article div#main hgroup{
+			width:650px;
+			margin-top:60px;
+		}
+		article div#main hgroup h3{
+			font-size:18px;
+			font-weight:700;
+			text-indent: 1em;
+			line-height:46px;
+		}
+		article div#main hgroup h3 a{
+			color:#28394B;
+		}
+		article div#main hgroup a.tm{
+			color:#28394B;
+			font-size:18px;
+			line-height:26px;
+			font-weight: 700;
+		}
+		article div#main hgroup p.nr{
+			margin:10px 0;
+		}
+		article div#main hgroup p.nr a{
+			font-size:14px;
+			line-height:26px;
+			color:#28394B;
+		}
+		article div#main hgroup p.time{
+			color:#242424;
+			font-size:14px;
+			line-height:36px;
+		}
+		article div#main hgroup hr{
+			width:650px;
+			height:1px;
+			border:none;
+			color:#e5e5e5;
+		}
+		/*讨论区*/
+		article div#main div#taolun{
+			width:650px;
+			height:22px;
+			margin-top:60px;
+			position:relative;
+			border-bottom:1px solid #e5e5e5;
+			padding-bottom:10px;
+		}
+		article div#main div#taolun img{
+			width:27px;
+			height:22px;
+		}
+		article div#main div#taolun p.left{
+			width:80px;
+			height:22px;
+			line-height: 22px;
+			font-size:18px;
+			color:#242424;
+			font-weight: 700;
+			position:absolute;
+			top:0;
+			left:30px;
+		}
+		article div#main div#taolun img.right{
+			width:24px;
+			height:17px;
+			position:absolute;
+			top:3px;
+			left:580px;
+			display:block;
+		}
+		article div#main div#taolun p.right{
+			font-size:14px;
+			font-family: simsun;
+			color:#242424;
+			line-height:22px;
+			float:right;
+		}
+		article div#main p.gentie{
+			width:650px;
+			height:20px;
+			margin:10px 0;
+		}
+		article div#main p.gentie span.g1{
+			color:#242424;
+			font-family: simsun;
+			font-size:16px;
+			letter-spacing:1px;
+			line-height:20px;
+			margin:0px 10px;
+			font-weight: 700;
+		}
+		article div#main p.gentie span.g2{
+			color:#878787;
+			font-size:12px;
+			line-height:20px;
+			font-family: simsun;
+			margin-right:200px;
+		}
+		article div#main p.gentie a{
+			font-size:24px;
+			font-family: simsun;
+			font-weight: 700px;
+			line-height: 20px;
+			color:#842312;
+		}
+		article div#main p.gentie span.g3{
+			font-size:12px;
+			line-height:20px;
+			color:#242424;
+			font-family: simsun;
+			margin:0px 10px;
+		}
+		article div#main form.pl{
+			width:650px;
+			height:150px;
+			margin-top:12px;
+			position:relative;
+		}
+		article div#main form.pl img{
+			width:48px;
+			height:48px;
+			padding:5px;
+			border:6px solid grey;
+			display:block;
+			position:absolute;
+			top:14px;
+			left:20px;
+		}
+		article div#main form.pl div{
+			width:471px;
+			height:104px;
+			position:absolute;
+			top:0px;
+			left:109px;
+			border-top:1px solid #a0a0a0;
+			border-left:1px solid #a0a0a0;
+			border-right:1px solid #e3e3e3;
+			border-bottom:1px solid #e3e3e3;
+		}
+		article div#main form.pl div textarea{
+			width:469px;
+			height:102px;
+			border-top:1px solid #696969;
+			border-left:1px solid #696969;
+			background:transparent url(./images/logo.jpg)no-repeat center;
+		}
+		article div#main form.pl a.form1{
+			font-family: simsun;
+			font-size:12px;
+			color:red;
+			display:block;
+			position:absolute;
+			top:127px;
+			left:337px;
+		}
+		article div#main form.pl a.form2{
+			width:61px;
+			height:32px;
+			background: #55c8ee;
+			color:white;
+			font-size:12px;
+			display:block;
+			position: absolute;
+			top:116px;
+			left:500px;
+			line-height:32px;
+			text-align:center;
+			font-weight:700;
+			font-family:宋体;
+		}
+		article div#main p.lichang{
+			width:650px;
+			height:12px;
+		}
+		article div#main p.lichang a.zuire{
+			color:#B42312;
+			font-family: simsun;
+			font-size:12px;
+			border-right:1px solid #ffd99e;
+			padding-right:2px;
+		}
+		article div#main p.lichang a.zuixin{
+			color:#28394B;
+			font-family: simsun;
+			font-size:12px;
+			padding-left:2px;
+			border-left:1px solid #9ebcff;
+		}
+		article div#main p.lichang span{
+			color:#878787;
+			font-family:simsun;
+			font-size:12px;
+		}
+		article div#main img.lic_line{
+			width:650px;
+			height:6px;
+		}
+		/*右侧aside部分*/
+		article aside{
+			width:300px;
+			float:right;
+		}
+		article aside hgroup{
+			font-size:18px;
+			line-height:26px;
+			font-weight:700;
+			margin:10px 0;
+		}
+		/*编辑推荐部分*/
+		article aside ul.bjtj{
+			list-style:none;
+			border-bottom:1px solid #e5e5e5;
+			padding-bottom:3px;
+		}
+		aiticle aside ul.bjtj li{
+			width:300px;
+			height:34px;
+		}
+		article aside ul.bjtj li a{
+			font-size:14px;
+			line-height:34px;
+		}
+		article aside ul.bjtj li a.dan{
+			color:#28394B;
+		}
+		article aside ul.bjtj li a.shuang{
+			color:#939395;
+		}
+		/*精彩图片部分*/
+		article aside ul.jctp{
+			list-style:none;
+			width:300px;
+			height:380px;
+			border-bottom:1px solid #e5e5e5;
+			padding-bottom:3px;
+		}
+		article aside ul.jctp li{
+			width:150px;
+			float:left;
+			text-align:center;
+			margin:2px 0;
+		}
+		article aside ul.jctp li img{
+			width:140px;
+			height:93px;
+			margin:0 auto;
+			display:block;
+		}
+		article aside ul.jctp li a{
+			color:#28394B;
+			font-size:14px;
+			font-family:simsun;
+			line-height:26px;
+		}
+		article aside div.tjsp{
+			width:300px;
+			height:300px;
+			position: relative;
+		}
+		article aside div.tjsp div.list{
+			width:150px;
+			height:10px;
+			position: absolute;
+			top:-30px;
+			left:170px;
+		}
+		article aside div.tjsp div.list a.list{
+			width:0px;
+			height:0px;
+			border-radius:50%;
+			border:10px solid black;
+			margin:0 5px;
+			float:left;
+			display:block;
+		}
+		article aside div.tjsp div.list a.list:hover{
+			border:10px solid red;
+		}
+		article aside div.tjsp div.tw{
+			width:300px;
+			height:280px;
+			border-bottom:1px solid #e5e5e5;
+			text-align:center;
+		}
+		article aside div.tjsp div.tw a.sp_tp{
+			width:300px;
+			height:230px;
+		} 
+		article aside div.tjsp div.tw a.sp_tp img{
+			width:300px;
+			height:230px;
+		}
+		article aside div.tjsp div.tw a.sp_bt{
+			width:300px;
+			font-size:14px;
+			font-weight:700;
+			font-family:微软雅黑;
+			line-height:40px;
+			color:#28394B;
+		}
+		/*二维码部分*/
+		article aside div.erweima{
+			width:300px;
+			height:113px;
+		}
+		article aside div.erweima img{
+			width:113px;
+			height:113px;
+			margin-left:25px;
+		}
+		article aside p.weixin{
+			width:300px;
+			height:30px;
+			border-bottom:1px solid #e5e5e5;
+		}
+		article aside p.weixin span{
+			width:150px;
+			height:30px;
+			font-size:12px;
+			line-height:30px;
+			text-align:center;
+			display:block;
+			float:left;
+		}
+		/*点击排行部分*/
+		article aside ul.djph{
+			list-style:none;
+		}
+		article aside ul.djph li a{
+			font-size:14px;
+			line-height: 26px;
+			color:#939395;
+			font-family:微软雅黑;
+		}
+		article aside ul.djph li#a1 a{
+			color:#28394B;
+		}
+		/*底部footer部分*/
+		footer{
+			width:100%;
+			height:112px;
+			background:#424242;
+		}
+		footer div#foot{
+			width:1000px;
+			height:112px;
+			margin:0 auto;
+			background: #424242;
+		}
+	</style>
+</head>
+<body>
+<!-- http://finance.cnr.cn/gundong/20150611/t20150611_518825199.shtml -->
+	<header>
+		<nav>
+			<a href="">首页</a>
+			<a href="">新闻</a>
+			<a href="">财经</a>
+			<a href="">军事</a>
+			<a href="">汽车</a>
+			<a href="">科技</a>
+			<a href="">体育</a>
+			<a href="">教育</a>
+			<a href="">旅游</a>
+			<a href="">娱乐</a>
+			<a href="">健康</a>
+			<a href="">公益</a>
+			<a href="">图片</a>
+			<a href="">三农</a>
+			<a href="" class="nav4">中国广播</a>
+		</nav>
+		<div class="top">
+			<a href="" id="logo">
+			<img src="./images/logo.jpg" alt="">
+			</a>
+			<p>
+			<a href="">央广网财经</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="">财经滚动</a>
+			</p>
+			<form action="">
+				<input type="text" id="search">
+				<a href=""><img src="./images/sy.jpg" alt=""></a>
+			</form>
+		</div>
+		
+
+	</header>
+	<hr>
+	<article>
+		<div id="main">
+			<h1>
+				中国中车股价连日重挫 市值蒸发近1334亿
+			</h1>
+			<p class="lujin">
+				<span>2015-06-11 15:58:00 来源：</span>
+				<a href="">南方日报</a>
+			</p>
+			<section>
+				在8日涨停之后，中国中车从巅峰跌下悬崖，9日、10日两天连续下跌。
+			</section>
+			<section>
+				8日开盘时，股价达32.40元/股，9日，中国中车高开低走，跌幅9.32%。H股大跌逾12%。两个交易日内A股市值锐减1346亿元，10日开盘股价跌至27.80元/股，跌幅达到5.38%，收盘报26.52元/股，跌9.73%。两日累计跌幅高达18%，市值蒸发近1334亿。
+
+			</section>
+			<section>
+				对于接连大跌，有网友失望表示“神车”走下神坛。不过，对于两日之间的暴跌，也不乏对资金操纵博弈的猜疑。
+
+			</section>
+			<section>
+				据最新两融数据，9日中国中车获融资买入18.77亿元，同时被融资偿还了16.10亿元，融资净买入2.67亿元，净买入金额为两市个股中排行第13位。中国中车最新融资余额为65.64亿元。而盘后数据显示，多家机构出现在中国中车昨日交易公开信息的买卖方，机构之间博弈激烈。卖出中国中车金额最大的为国信证券大连和平广场证券营业部，卖出金额高达11.64亿元。
+			</section>
+			<section>
+				此前，对于中国中车的复牌，机构曾表示，南北车股票自重组消息发布以来一直高歌猛进，充分释放利好，未来中国中车有一定的上涨想象力，但在复牌后能否保持强劲表现，还需要公司的业绩支撑。 （记者/陈若然）
+			</section>
+			<section id="bianji">
+				编辑：王忻
+			</section>
+			<p id="key">
+				<span>关键词：中车;股价;市值蒸发</span>
+				<img src="./images/slj.gif" alt="">
+				<a href="">说两句</a>
+			</p>
+			<hgroup>
+				<h3><a href="">相关阅读</a></h3>
+				
+			
+				<a href="" class="tm">沪指收涨0.3%顽守5100点 中国中车逆市跌2%</a>		
+				<p class="nr"><a href="">
+				据行业板块显示，酒店餐饮涨超5%领跑大盘，商贸代理、家居用品、矿物制品、工业机械等涨幅靠前。截至收盘，上证综指报收5121.59点，涨15.56点，涨幅0.30%，成交9746.71亿元；深成指报收17889.69点，涨212.12点，涨幅1.20%，成交8214.10亿元。		
+				</a></p>
+				<p class="time">2015-06-11 15:25:00 </p>
+				<hr>
+				<a href="" class="tm">
+				沪指冲高乏力失守5100 中国中车止跌翻红
+				</a>
+				<p class="nr"><a href="">A股早盘震荡下行，上证综指盘中跌逾1%，失守5100点；中小盘股相对抗跌，创业板指一度涨超1%，随后回落翻绿。中国中车最近几个交易日股价大幅震荡，周二、周三均大跌逾9%，不过这两个交易日融资客均在大量买入。
+				</a></p>
+				
+				<p class="time">2015-06-11 14:12:07 </p>
+				<hr>
+				<a href="" class="tm">中车股价2天暴跌18% 回应:被骂惨愿做出气筒</a>
+				<p class="nr"><a href="">合并后重新上市的中国中车仅让股民欢喜了一天而已，之后两个交易日连续暴跌，其中A股股价跌幅达到18.15%。对此，中国中车前晚深夜在微博上回应，称愿做大家的出气筒，提示股民要注意投资风险。
+				</a></p>
+				<p class="time">2015-06-11 10:31:00 </p>
+				<hr>
+			</hgroup>
+			<div id="taolun">
+					<img src="./images/pingl01.jpg" alt="">
+					<p class="left">参与讨论</p>
+					<img src="./images/pingl02.jpg" alt="" class="right">
+					<p class="right">我想说</p>
+			</div>
+			<p class="gentie">
+				<span class="g1">网友跟贴</span>
+				<span class="g2">文明上网，登录发帖</span>
+				<a href="">0</a>
+				<span class="g3">人参与</span>
+				<a href="">0</a>
+				<span class="g3">人跟贴</span>
+			</p>
+			<form action="" class="pl">
+				<img src="./images/uid.gif" alt="">
+				<div>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+				<a href="" class="form1">点击参与央广网评问卷调查</a>
+				<a href="" class="form2">发布</a>
+			</form>			
+			<p class="lichang">
+				<a href="" class="zuire">查看最热</a><a href="" class="zuixin">查看最新</a><span>网友评论仅供表达个人看法，并不表明央广网立场。</span>
+			</p>
+			<img src="./images/d.jpg" alt="" class="lic_line">
+		</div>
+		<aside>
+			<hgroup>编辑推荐</hgroup>
+			<ul class="bjtj">
+				<li><a href="" class="dan">稳增长大招一日齐出 发改委日批千亿项目</a></li>
+				<li><a href="" class="shuang">李克强放狠话：不许财政资金睡大觉</a></li>
+				<li><a href="" class="dan">陕西农妇炒股赚12万 不屑儿子工资</a></li>
+				<li><a href="" class="shuang">快播王欣将定罪 是否故意涉黄惹争议</a></li>
+				<li><a href="" class="dan">MSCI：不排除明年6月前有“特别安排”</a></li>
+				<li><a href="" class="shuang">华润万东定增迎金主 马云系医疗投资版图浮现</a></li>
+				<li><a href="" class="dan">河北枪击案牺牲警察之妻跳楼身亡</a></li>
+				<li><a href="" class="shuang">关于A股纳入MSCI 不可不知的几件事</a></li>				
+			</ul>
+			<hgroup>精彩图片</hgroup>
+			<ul class="jctp">
+				<li><img src="./images/jctp1.png" alt=""></li>
+				<li><img src="./images/jctp2.png" alt=""></li>
+				<li><a href="">抗日神剧竟有出处</a></li>
+				<li><a href="">揭秘“贪官”被查场所</a></li>
+				<li><img src="./images/jctp3.jpg" alt=""></li>
+				<li><img src="./images/jctp4.jpg" alt=""></li>
+				<li><a href="">泰国“人妖”排队变性</a></li>
+				<li><a href="">“皇家壹号”内景曝光</a></li>
+				<li><img src="./images/jctp5.jpg" alt=""></li>
+				<li><img src="./images/jctp6.jpg" alt=""></li>
+				<li><a href="">盘点中国疯狂考试</a></li>
+				<li><a href="">五十年后重返校园</a></li>
+			</ul>
+
+			<hgroup class="tjsp">视频推荐</hgroup>
+				
+			<div class="tjsp">
+				<div class="list">
+					<a href="" class="list"></a>
+					<a href="" class="list"></a>
+					<a href="" class="list"></a>
+					<a href="" class="list"></a>
+				</div>
+				<div class="tw">
+						<a href="" class="sp_tp"><img src="./images/tjsp1.jpg" alt=""></a>
+						<a href="" class="sp_bt">徐冠巨：用互联网手段整合物流业</a>
+				</div>
+			</div>
+			<div class="erweima"><img src="./images/weixin.jpg" alt=""><img src="./images/sjygw.jpg" alt=""></div>
+			
+			<p class="weixin"><span>央广网官方微信</span><span>央广网手机微信</span></p>
+
+			<hgroup>
+				点击排行
+			</hgroup>
+			<ul class="djph">
+				<li id="a1"><a href="">私下赵薇烟不离手 原来明星台前幕后差距这么大！</a></li>
+				<li><a href="">一切尺度都是浮云 一线女星豪放陪酒</a></li>
+				<li><a href="">王菲嗜烟如命 一线女星重口味私生活曝光</a></li>
+				<li><a href="">童星长大都变丑？容貌变残令人惋惜</a></li>
+				<li><a href="">5岁男童9楼坠下 邻居徒手接住救其性命(图)</a></li>
+				<li><a href="">文章的纹身十分个性 揭明星大尺度私密刺青</a></li>
+				<li><a href="">陈佩斯与儿子潘长江与女儿 内地大腕罕见亲子照曝光</a></li>
+			</ul>
+		</aside>
+	</article>
+<!-- 	<footer>
+		<div id="foot">
+			<img src="" alt="">
+			<div>
+				<p>违法和不良信息举报电话：010-56807188 新闻热线：4008000088 E-mail:4008000088@cnr.cn</p>
+				<p>网上传播视听节目许可证号 0102002 京ICP备05065762号-1 京公网安备110102000554</p>
+				<p>中央人民广播电台介绍 | 央广网介绍</p>
+			</div>
+			<img src="" alt="">
+		</div>
+	</footer>	 -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* CSS Document */
+/*框架左侧css样式*/
+@import url(base.css);
+#left_wrap{ 
+	width:291px;
+	height:1080px;
+	float:right; 
+	border-right:1px solid #ccc;
+}
+
+#left_wrap h2{
+	width:282px;
+	text-align:center;
+	color:#184663;
+	font-size:30px;
+	padding:200px 0 20px 0;	
+	border-bottom:5px solid #398ccc;
+	letter-spacing:20px;
+}
+#left_wrap li{
+	width:282px;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+}
+#left_wrap a{
+	float:left;
+	display:block;
+	width:200px;
+	text-decoration:none;
+	color:#353535;
+	letter-spacing:30px;
+}
+#left_wrap a:hover {
+	color:#398ccc;
+}

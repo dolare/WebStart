@@ -1,0 +1,62 @@
+<html>
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+</head>
+
+<body>
+	
+
+<h1>相亲大会</h1>
+<form action="">
+
+<!-- label用来选中鼠标点中的位置 -->
+<label for="mingzi">姓名：<input type="text" name = "uname" id = "mingzi"></label>
+<br><br>
+
+密码：<input type="password" name = "pwd">
+<br><br>
+
+
+<!-- 默认选中效果 checked = checked属性 -->
+性别：男<input type="radio" value = "0" name = "sex" checked = "checked">
+女<input type="radio" value = "1" name = "sex">
+<br><br>
+
+<!-- 同一组单选或者复选按钮的name属性值应该一样 -->
+家庭情况：有房有车 <input type="checkbox" name = "family[]" value = "fangche">
+百万存款 <input type="checkbox" name = "family[]" value = "cunkuan">
+老爹当官 <input type="checkbox" name = "family[]" value = "dieguan">
+欠债百万 <input type="checkbox" name = "family[]" value = "qianzai">
+<br><br>
+
+<!-- 默认选中用的是 selcected = selected属性 -->
+学历：  <select name="edu" id="">
+			<option value="youeryuan">幼儿园</option>
+			<option value="xiaoxue">小学</option>
+			<option value="chuzhong">中学</option>
+			<option value="gaozhong">高中</option>
+			<option value="daxue">大学</option>
+			<option value="yanjiusheng">研究生</option>
+			<option value="boshi">博士</option>
+			<option value="boshihou">博士后</option>
+		</select>
+<br><br>
+
+靓照：<input type="file">
+<br><br>
+
+个人介绍 <textarea name="description" id="" cols="30" rows="10" value = "填写内容">
+	
+</textarea>
+
+<input type="submit">
+<input type="reset">
+</form>
+
+</body>
+
+</html>

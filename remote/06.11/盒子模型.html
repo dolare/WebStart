@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>无标题</title>
+</head>
+
+
+<style type="text/css">
+	/*全局reset*/
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#news{
+		width: 800px;
+		border: solid red 4px;
+
+		/*内边距*/
+		padding-left: 20px;
+		padding-right: 1000px;
+		padding-top: 50px;
+
+		/*一个参数的时候代表上下左右四个方向*/
+		padding: 30px;
+		/*两个参数的时候 第一个参数代表上下 第二个参数代表左右*/
+		padding: 30px 60px;
+		/*三个参数的时候带表  上 左右 下*/
+		padding: 30px 60px 120px;
+		/*四个参数的时候代表 上 右 下 左*/
+
+	}
+
+	#image1{
+		/*将img转换成块级元素*/
+		display: block;
+		margin: 0px auto;
+	}
+
+	/*上下外边距不叠加 以最大为准 左右外边距累加*/
+	/*外边距可以为负 内边距不可以为负*/
+	#box1{
+		/*将块级元素变成行级元素*/
+		display: inline;
+		height: 100px;
+		background: red;
+		margin-bottom: 50px;
+	}
+	#box2{
+		width: 300px;
+		height: 100px;
+		background: yellow;
+		margin-top: 100px;
+		margin: 0 auto;
+
+
+		/*超出部分隐藏*/
+		overflow: hidden;
+		/*加滚动条*/
+		overflow: scroll;
+		/*需要的时候加滚动条*/
+		overflow: auto;
+	}
+	h1{
+		/*默认100%*/
+		color: blue;
+		width: 50%
+
+	}
+	div.box{
+		/*上下为0 左右自适应*/
+		background: blue；
+		width：400px;
+		height: 200px;
+		margin: 0 auto;
+	}
+	#menu {
+		width: 690px;
+		height: 40px;
+		background: #ff7ee0;
+		margin: 20px auto;
+		
+	}
+	#menu a{
+		
+		padding: 0 19px 0 19px;
+	/*	margin-right: 30px;*/
+		/*margin-left: 30px;*/
+		text-decoration: none;
+		line-height: 40px;
+		font-weight: 700;
+		display: inline-block;
+	}
+	#menu a:hover{
+		background: red;
+		color:white;
+	}
+</style>
+<body>
+<h1>块级元素</h1>
+<div id = "menu"><a href="">酒店</a>
+	<a href="">电影</a>
+	<a href="">购物</a>
+	<a href="">机票</a>
+	<a href="">身边团购</a>
+	<a href="">今日订单</a>
+	<a href=""></a>
+	<a href=""></a>
+</div>
+<!-- div#box$*2 -->
+<div id = "box1">box1</div>
+<div id = "box2">box1</div>
+<div class = "box">456123</div>
+	<div id="news">
+		<p>同学们大家好，发个广告打扰见谅：
+}
+-
+假期到了，大家亲朋好友有没有来美国玩需要用车的？
+想利用闲暇时间接点活贴补家用。
+-
+周末可以跑机场，奥特莱斯等远途往返接送服务。周一到周五提供晚间接送人服务（平时我也在准备假期学习等功课）；
+价格合理，收费方式灵，更可提供加时超长等客服务，保证加倍购物时间。
+2014年corolla，35万医疗保险，全程高速，安全驾驶。
+		</p>
+		<img src="../images/迦兰多1.jpg" width="400" id = "image1">
+		<img src="../images/迦兰多1.jpg" width="400" id = "image2">
+	</div>
+</body>
+</html>

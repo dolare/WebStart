@@ -1,0 +1,19 @@
+/* CSS Document */
+/*重置样式*/
+body,div,h1{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+	
+}
+/*子元素有浮动时、父元素没有高度的时候要清楚浮动*/
+.clearFix{
+	zoom:1;	
+}
+.clearFix:after{
+	content:'';
+	clear:both;
+	display:block;	
+}

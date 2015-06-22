@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网站管理后台top</title>
+</head>
+<style type="text/css">
+	/*全局css*/
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#main{
+		width: 1920px;
+		height: 210px;
+		background:#414654;
+		overflow: hidden;
+		float: left;
+	}
+	/*logo*/
+	#main .logo{
+		width: 210px;
+		height: 210px;
+		float: left;
+	}
+	#main .logo a:hover img{
+		opacity: 0.8;
+	}
+	/*分类*/
+	#main .fenlei{
+		height: 210px;
+		margin-left: 76px;
+		background: url(images/fenlei.png) no-repeat top left;
+		float: left;
+	}
+	#main .fenlei ul{
+		height: 210px;
+		overflow: hidden;;
+	}
+	#main .fenlei ul li{
+		float: left;
+		list-style: none;
+	}
+	.fenlei_li a{
+		width: 126px;
+		height: 210px;
+		display: block;
+		float: left;
+	}
+	/*伪类效果*/
+	.fenlei_li a:hover{
+		background: #000;
+		opacity: 0.2;
+	}
+	/*阴影*/
+	#foot{
+		height: 11px;
+		width: 100%;
+		float: left;;
+		background:url(images/shade.png) repeat top left;
+	}
+</style>
+<body>
+	<div id="main">
+		<div class="logo">
+			<a href="http:houdunwang.com"><img src="images/logo.png" alt="logo" /></a>
+		</div>
+		<div class="fenlei">
+			<ul>
+				<li class="fenlei_li"><a href="http://houdunwang.com" target="right"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+				<li class="fenlei_li"><a href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="foot"></div>
+</body>
+</html>
