@@ -9,6 +9,7 @@
 			margin: 0px;
 			padding: 0px;
 			text-decoration: none;
+			font-size: 14px;
 		}
 
 		/*头部广告*/
@@ -68,8 +69,163 @@
 			color: #8C8C8C;
 		}
 		#header_nav_100 .header_nav .left a .arrow{
+			width: 9px;
+			height: 36px;
+		}
+		
+
+		#header_nav_100 .header_nav .right{
+			position: absolute;
+			top: 0px;
+			left: 500px;
+			/*border: 2px yellow solid;*/
+			width: 710px;
+			height: 38px;
+		}
+
+		#header_nav_100 .header_nav .right p{
+			line-height: 38px;
+			color: #8C8C8C;
+			float: left;
+			width: 70px;
 
 		}
+		#header_nav_100 .header_nav .right a{
+			position: relative;
+	/*		border: 2px solid black;*/
+			line-height: 38px;
+			float: left;
+		}
+		#header_nav_100 .header_nav .right a span.con{
+			color: #8C8C8C;	
+			margin-left:23px;
+		}
+		#header_nav_100 .header_nav .right a span.line{
+			position: absolute;
+			border-right: black solid 1px;
+			/*margin-left: 5px;*/
+			width: 0px;
+			left: 5px;
+			top: 0px;
+			display: inline-block;
+			
+		}
+		#header_nav_100 .header_nav .right a span.arrow{
+			position: absolute;
+			top: 0px;
+			left: 5px;
+			width: 9px;
+			height: 36px;
+			display: inline-block;
+			background: url(images/jiantou.png) no-repeat 0 15px;
+
+		}
+		/*/*头部导航结束*/
+
+
+
+
+		/*头部搜索开始*/
+
+		#search{
+			width: 1210px;
+			height: 110px;
+			margin: 0 auto;
+			border: 1px solid black;
+		}
+		#search .ad{
+			width: 235px;
+			border: 1px red solid;
+			height: 110px;
+			float: left;
+		}
+		#search .sou{
+			width: 745px;
+			border: 1px red solid;
+			height: 110px;
+			float: left;
+		}
+		#search .peichang{
+			width: 224px;
+			border: 1px red solid;
+			height: 110px;
+			float: left;
+		}
+
+		
+
+		/*头部搜索结束*/
+
+
+		/*主导航开始*/
+		#nav{
+			width: 100%;
+			background: #FF4883;
+			height: 45px;
+		}
+
+		#nav .center{
+			width: 1210px;
+			height: 45px;
+			border: 1px yellow solid;
+			margin: 0 auto;
+		}
+
+		#nav .center .left{
+			width: 230px;
+			height:45px;
+			float: left;
+			background: #F23B75;
+			position: relative;
+		}
+
+		#nav .center .left a{
+			color: white;
+			font-size: 18px;
+			position: absolute;
+			font-weight: 4em;
+			width: 230px;
+			height: 45px;
+			text-indent: 45px;
+			line-height: 45px;
+		}
+
+		#nav .center .left :hover{
+			background: #C92258;
+		}
+
+
+
+		#nav .center .right{
+			position: relative;
+			height: 45px;
+			background: #FF4883;
+			float: left;
+			/*border: 1px blue solid;*/
+			width: 970px;
+		}
+
+		#nav .center .right a{
+			display: inline-block;
+			color: white;
+			font-size: 18px;
+			line-height: 45px;
+			font-weight: 4em;
+			float: left;
+			/*border: 2px black solid;*/
+			height: 45px;
+			margin: 0 auto;
+			padding: 0 20px;	
+		}
+		
+		#nav .center .right a:hover{
+			background: #C92258;
+		}
+
+
+
+
+
 
 
 
@@ -88,11 +244,47 @@
 				<a href=""><span class="con"></span>切换城市<span class="arrow"></span></a>
 			</div>
 
-			<div class="right"></div>
+			<div class="right">
+				<p>Hi, coustom</p>
+				<a href=""><span class="con">退出</span><span class="line"></span></a>
+				<a href=""><span class="con">手机糯米</span><span class="arrow"></span><span class="line"></span></a>
+				<a href=""><span class="con">我的订单</span><span class="line"></span></a>
+				<a href=""><span class="con">我的糯米</span><span class="arrow"></span><span class="line"></span></a>
+				<a href=""><span class="con">最近浏览</span><span class="arrow"></span><span class="line"></span></a>
+				<a href=""><span class="con">我是商家</span><span class="arrow"></span><span class="line"></span></a>
+				<a href=""><span class="con">帮助中心</span><span class="line"></span></a>
+				<a href=""><span class="con">关注</span><span class="arrow"></span><span class="line"></span></a>
+				<a href=""><span class="con">收藏</span></a>
+			</div>
 		</div>
 	</div>
 
 
+	<div id="search">
+		<div class="ad"></div>
+		<div class="sou"></div>
+		<div class="peichang"></div>
+
+	</div>
+
+	
+	<div id="nav">
+		<div class="center">
+			<div class="left"><a href="">全部团购分类</a></div>
+			<div class="right">
+				<a href="">首页</a>
+				<a href="">精选品牌</a>
+				<a href="">电影</a>
+				<a href="">酒店</a>
+				<a href="">今日新单</a>
+				<a href="">外卖</a>
+				<a href="">购物</a>
+			</div>
+		
+
+		</div>
+
+	</div>
 
 
 </body>
