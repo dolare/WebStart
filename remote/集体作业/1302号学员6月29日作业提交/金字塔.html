@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		margin:0 auto;
+		color: #F92672;
+	}
+</style>
+<script type="text/javascript">
+	//金字塔
+
+	var num=prompt('请输入金字塔层数:')
+	for(i=0;i<num;i++)
+	{
+		for(k=num-1;k>i;k--)
+		{
+			document.write('&nbsp;'); //输入空格
+		}
+
+		for(j=0;j<2*i+1;j++)
+		{
+			document.write('*');
+
+		}
+		document.write('<br />');
+	}
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

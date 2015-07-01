@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	div{
+		margin:100px auto;
+		width: 1024px;
+		height: 649px;
+		background: url(bg.jpg) no-repeat;
+		font-size: 22px;
+		font-weight: 600;
+		font-family: arial;
+		color: #1A1914;
+		position: relative;
+	}
+	div table {
+		position: absolute;
+		top: 200px;
+		left: 70px;
+	}
+	div table tr{
+		background:#FBFADB;
+		filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+		-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+		opacity:0.7;/*其他，透明度50%*/
+	}
+	div table td{
+		width: 85px;
+		height: 37px;
+		padding: 0 0 0 10px;
+		/*background:#FBFADB;*/
+		
+	}
+	.class{
+		background: #81D33F;
+	}
+</style>
+<script type="text/javascript">
+	
+
+	// 九九乘法表
+	document.write('<div><table>');
+	for(i=1;i<10;i++)
+	{
+		if(i%2==0)
+		{
+			document.write("<tr class='class'>");
+		}else{
+				document.write('<tr>');
+		}
+	
+		for(j=1;j<=i;j++)
+		{
+			document.write('<td>'+j+'×'+i+'='+j*i+'</td>');
+		}
+
+
+		document.write('</tr>');
+	}
+	
+	document.write('</table></div>');
+
+
+</script>
+
+
+</head>
+
+<body>
+
+</body>
+</html>
