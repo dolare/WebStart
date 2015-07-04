@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment07.03</title>
+</head>
+
+<style type="text/css">
+	p.A13{
+		font-size: 40px;
+		color: blue;
+	}
+
+	p.A24{
+		font-size: 40px;
+		color: red;
+	}
+
+	p.A5{
+		font-size: 40px;
+		color: green;
+	}
+</style>
+
+
+<script type="text/javascript">
+	//.................assignment1,3 Start...........................//
+	
+	// function:sorting an array and get the max element of this array
+	function maxAndSort(arr){
+		for (var i = 0; i < arr.length; i++) {
+			var currentElement = arr[i];
+			var j;
+
+			for (j = i - 1; j >= 0 && arr[j] > currentElement; j--)
+				arr[j + 1] = arr[j];
+
+			arr[j + 1] = currentElement;	
+		}
+		return arr[arr.length - 1];
+	}
+
+	//let the user know how to input the array . if the input is error,give another chance to input
+	var arr = new Array();
+	var bool = true;
+	while(bool){
+		var temp = prompt("Please enter an  Array ,each element should be divided by ',' , for exmaple: 1,2,3,4,5");
+		var tempArr = new Array();
+		tempArr = temp.split(",");
+		for (var i = 0; i < tempArr.length; i++) {
+			if(!isNaN(tempArr[i])){
+				arr[i] = Number(tempArr[i]);
+				bool = false;
+			}else {
+				alert("Error input,the element of Array must be numbers.");
+				bool = true;
+				break;
+			}
+		}
+		
+	}
+	document.write("<p class = 'A13'> For assignment 1 and 3  :");
+	document.write("<br/>The numbers you entered are : ");
+	for (var i = 0; i < arr.length; i++) {
+		if(i == arr.length - 1){
+			document.write(arr[i]);
+		}else document.write(arr[i] + ",");
+	}
+
+	//output the new array after sorting and get the maxElement
+	var maxNumber = maxAndSort(arr);
+
+	document.write("  <br/> The new array after sorting should be : [");
+	for (var i = 0; i < arr.length; i++) {
+		if(i == arr.length - 1){
+			document.write(arr[i]);
+		}else document.write(arr[i] + ",");
+	}
+	document.write("]<br/> The max number is " + maxNumber + " <br/><br/><p/>");
+
+	//.................assignment1,3 End...........................//
+
+
+
+	//.................assignment2,4 Start..........................//
+	// check the input of the row and column
+	while(true){
+		var rowString = prompt("Please enter the row for two-dimensional array:");
+		var colString = prompt("Please enter the column for two-dimensional array: ");
+		if(!isNaN(rowString) && !isNaN(colString ) && parseInt(rowString) > 0 && parseInt(colString) > 0){
+			var row = parseInt(rowString);
+			var col = parseInt(colString);
+			break;
+		}else alert("Error input,the values of row and column must be numbers");
+	}
+
+
+	// check the input of each element of array
+	var arr2 = new Array();
+	for (var i = 0; i < row; i++) {
+		arr2[i] = new Array();
+		for (var j = 0; j < col; j++)
+			arr2[i][j] = prompt("Please enter a place for the row : [" + i + " ]column :[ " + j +  "] For exmaple: 西瓜");  
+	}
+
+
+	document.write("<p class = 'A24'> For assignment2,4: <br/> The array you input is : " + arr2 + "<br/>");
+	
+	//get the index of max-length element and store the result in an array
+	function getMaxIndex(arr2){
+		var length = arr2[0][0].length;
+		var result = new Array();
+	
+		for (var i = 0; i < row; i++) {
+			for (var j = 0; j < col; j++)
+				if(arr2[i][j].length > length){
+				 length = arr2[i][j].length;
+				 result[0] = i;
+				 result[1] = j;
+				}
+		}
+		return result;
+	}
+
+	//output the result
+	var output = getMaxIndex(arr2);
+	document.write("The index of the max-length element is :[" + output[0] + "][" + output[1] + "]<br/>");
+	for (var i = 0; i < row; i++) {
+		for (var j = 0; j < col; j++)
+			document.write(arr2[i][j] + "很漂亮" +　"<br/>" );
+	}
+	document.write("<br/><p/>");
+	//.................assignment2,4 End..........................//
+
+
+
+	//.................assignment5 Start..........................//
+	document.write("<p class = 'A5'> For assignment5 <br/>")
+	var taozi = 10;
+	var dashixiong = {
+		"name" : "孙行者",
+		"sex" : "男",
+		"height" : "172",
+		"qishierbian": function(){
+			document.write("看我七十二变" + "<br/>");
+		},
+		"chitaozi": function(){
+			taozi--;
+			document.write("剩余蟠桃数量：" +　taozi + "<br/>");
+		}
+	}
+
+	document.write(dashixiong.name);
+	document.write(dashixiong.sex);
+	
+	dashixiong.qishierbian();
+	dashixiong.chitaozi();
+	dashixiong.chitaozi();
+
+	document.write("<p/>");
+	//.................assignment5 End..........................//
+</script>
+	
+	
+
+<body>
+	
+</body>
+</html>

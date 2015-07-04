@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		p{
+			color: red;
+			font-size: 45px;
+			font-weight: 2em;
+			text-indent: 2em;
+		}
+	</style>
+	<script type="text/javascript">
+		function max(x,y){
+			if(x > y) 
+				return x;
+			else 
+				return y;
+		}
+
+		var x = prompt("Please enter x for max(x,y):");
+		var y = prompt("Please enter y for max(x,y):");
+
+		document.write(" <p> The bigger number is " + max(x,y) + "<p/>");
+
+		function jisuan(x,y,z){
+			var x = parseInt(x);
+			var z = parseInt(z);
+			switch(y){
+				case "+":return x + z;
+				case "-":return x - z;
+				case "*":return x * z;
+				case "/":return x / z;
+				case "%":return x % z;
+				default:alert("Error input,y must be '+' '-' '*' '/' '%'") ;
+			}
+			return null;
+		}
+
+		
+		while(true){
+			var a = prompt("Please enter a for jisuan(a,b,c):");
+			var b = prompt("Please enter b for jisuan(a,b,c):");
+			var c = prompt("Please enter c for jisuan(a,b,c):");
+			var result = jisuan(a,b,c);
+
+			if(result == null) continue;
+				document.write("<br/> <p>The final result is : " + a + b + c + "=" + jisuan(a,b,c) + "<p/>");
+			break;
+		}
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
