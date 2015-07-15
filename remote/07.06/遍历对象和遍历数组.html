@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+	var ershixiong = {
+		'name':'二师兄',
+		'sex':'不详',
+		'height':'180cm',
+		'weight':'100公斤',
+		'eat':function(){
+			alert('会吃')
+		},
+		'sleep':function(){
+			alert('会睡')
+		}
+	};
+
+	// 删除对象里的属性或方法
+	delete ershixiong.sex;
+	alert(ershixiong.sex);
+
+	
+	 for(x in ershixiong){
+		document.write(x+'=>'+ershixiong[x]+'<br />');
+	 }
+
+
+
+	// alert(ershixiong.sex);
+	// alert(ershixiong['sex']);
+
+	// ershixiong.eat();
+	// ershixiong['eat']();
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
