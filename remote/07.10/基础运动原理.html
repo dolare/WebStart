@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function(){
+
+		// 抓元素
+		var btn = document.getElementById('btn');
+		var dan = document.getElementById('dan');
+
+		// 给按钮加单击事件
+		btn.onclick = function(){
+			// 设置定时器，让图片每个一段时间就改变left值
+			setInterval(function(){
+				// 获得当前的left值
+				var old_left = dan.style.left;
+				// 计算新的left值
+				var new_left = parseInt(old_left)+5;
+				// 将新的left值赋值回去
+				dan.style.left = new_left+'px';
+			},50)
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<input type="button" value="走你~~~┏ (゜ω゜)=☞" id="btn" />
+
+<br /><br />
+
+<img src="dan.gif" alt="" id="dan" style="position:absolute;left:0px;top:50px;" />
+
+
+</body>
+</html>
