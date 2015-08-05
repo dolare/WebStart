@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 /*清零*/
-{
+*{
 	margin:0px;
 	padding:0px;
 }
@@ -288,14 +288,14 @@ ul{
 	height: 150px;
 	left: 0px;
 	top: 396px;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 #hd_con .con3 .adver img{
 	width: 280px;
 	height: 100px;
 }
 #hd_con .con3 .adver p{
-	margin-top: -5px;
+	margin: 0 auto;
 	color: #999;
 }
 
@@ -322,3 +322,56 @@ h2{
 	top: 0px;
 	border: 1px solid blue;
 }
+
+
+/*电影区域开始*/
+
+#movie{
+	background: #F7F7F7;
+	height: 625px;
+	border: 1px solid red;
+}
+
+#movie .movie_main{
+	height: 625px;
+	width: 950px;
+	/*border: 1px blue solid;*/
+	margin:0 auto;
+}
+
+#movie .movie_main .left{
+	height: 625px;
+	width: 100px;
+	/*border: 1px black solid;*/
+}
+#movie .movie_main .left ul{
+	position:relative;
+	/*border: 1px yellow solid;*/
+}
+#movie .movie_main .left li.normal{
+	margin: 12px 0;
+		font-size: 17px;
+}
+
+#movie .movie_main .left li.special{
+	margin: 18px 0;
+		font-size: 35px;
+}
+#movie .movie_main .left a{
+	color: #5dbbe3;
+}
+
+#movie .movie_main .left a:hover{
+	color: white;
+	background:#1c8bd0; 
+}
+
+#movie .movie_main .right{
+	height: 625px;
+	width: 580px;
+	border: 1px solid blue ;
+}
+
+
+
+

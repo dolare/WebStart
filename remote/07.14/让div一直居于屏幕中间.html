@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	#box{
+		width: 300px;
+		height: 300px;
+		color: blue;
+		background: red;
+		position: absolute;
+	}
+</style>
+
+<script type="text/javascript">
+window.onload = function(){
+	 function box_jvzhong(){
+		var box = document.getElementById("box");
+
+		var w = box.offsetWidth;
+		var h = box.offsetHeight;
+
+		var window_width = document.documentElement.clientWidth;
+		var window_height = document.documentElement.clientHeight;
+
+		//计算left 和 top
+		var left = (window_width - w)/2;
+		var top = (window_height - h)/2;
+
+		box.style.left = left + "px";
+		box.style.top = top + "px";
+	}
+
+	box_jvzhong();
+	//给窗口加resize时间
+	window.onresize = function(){
+		box_jvzhong();
+	}
+}
+</script>
+<body>
+	<div id="box"></div>
+</body>
+</html>

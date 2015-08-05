@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload = function(){
+
+		//get elements
+		var btn = document.getElementById("btn");
+		var dandan = document.getElementById("dandan");
+		var s = 5;
+
+		//onclick
+		btn.onclick = function(){
+			//set up timer
+			timer = setInterval(function(){
+				var old_left = dandan.style.left;
+				var new_left = parseInt(old_left) + s;
+
+				dandan.style.left = new_left + "px";
+				document.title = new_left;
+
+				if(new_left >= 1000){
+					s = -5;
+				}
+				if(new_left <= 0){
+					s = 5;
+				}
+			},20)
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<input type="button" value="蛋蛋开始跑步" id="btn">
+	<img src="蛋蛋.gif" id = "dandan" alt="" style="position:absolute;left:0px;top:50px;">
+</body>
+</html>

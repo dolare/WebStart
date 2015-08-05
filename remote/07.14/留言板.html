@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#main{
+		width:600px;
+		height: 600px;
+		margin: 0 auto;
+	}
+	#main #box{
+		width: 600px;
+		height: 300px;
+		border: 2px solid blue;
+		margin: 10px 0;
+		overflow:auto;
+	}
+	#main #box .msg{
+		font-size: 15px;
+		line-height: 2em;
+		font-family: 微软雅黑;
+		text-indent: 20px;
+	}
+	#liuyan{
+		width: 600px;
+		border: 2px solid orange;
+		height: 50px;
+
+	}
+
+
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var box = document.getElementById('box');
+		var liuyan = document.getElementById('liuyan');
+		var btn = document.getElementById('btn');
+
+		// 给按钮加单击事件
+		btn.onclick = function(){
+			// 获得用户输入的内容
+			// 表单元素（input textarea）需要通过value属性来获得内容
+			var con = liuyan.value;
+			if(con==''){
+				alert('别乱来！');
+				return;
+			}
+			// 创建新的p标签
+			var newP = document.createElement('p');
+			// 设置内容
+			newP.innerHTML = con;
+			// 设置属性
+			newP.setAttribute('class','msg');
+			// 将新创建的标签插入到box里
+			box.appendChild(newP);
+			// 清空留言区域
+			liuyan.value = '';
+		}
+		
+		
+	}
+</script>
+</head>
+
+<body>
+	<div id="main">
+		<div id="box">
+			<p class="msg">你好，我想请你吃饭</p>
+			<p class="msg">啥时候？</p>
+			<p class="msg">哦，不好意思，发错了</p>
+			<p class="msg">。。。。。</p>
+		</div>
+
+		<textarea id="liuyan" cols="30" rows="10"></textarea>
+		<input type="button" value="提交留言" id="btn" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+	
+window.onload = function(){
+	//找list的儿子节点
+	var list = document.getElementById('list');
+	var one = document.getElementById('one');
+	var list1 = list.childNodes;
+
+	alert(list1.length);
+
+	list1[7].style.color = 'blue';
+
+	//找父级节点
+	var p = one.parentNode;
+	p.style.color = 'red';
+
+	//找第一个子节点(不成功 因为回车和空格都算成了节点 第一个节点不是one)
+	var o = list.firstChild;
+	o.style.color = 'red';
+}
+</script>
+<body>
+	<ul id="list">
+		<li id="one">灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+		<li>灰太狼 红太狼</li>
+	</ul>
+</body>
+</html>

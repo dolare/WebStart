@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 600px;
+		height: 500px;
+		border: 4px solid blue;
+		margin: 0 auto;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		
+		var btn = document.getElementById('btn');
+		var title = document.getElementById('title');
+		var box = document.getElementById('box');
+
+		// 给按钮加单击事件
+		btn.onclick = function(){
+			// 创建空标签
+			var newH = document.createElement('h2');
+			// 给元素加内容
+			newH.innerHTML = '我是新来的！别打我哦！';
+			// 给元素加属性
+			newH.setAttribute('class','hd');
+
+			// 将新创建的元素插入到指定位置
+			box.appendChild(newH);
+		}
+
+	}
+</script>
+</head>
+
+<body>
+
+<input type="button" value="点我增加一个" id="btn" />
+<br />
+<h1 id="title">我是老大~</h1>
+<div id="box">
+	<h2>后盾网 人人做后盾0</h2>
+	<h2>后盾网 人人做后盾1</h2>
+	<h2>后盾网 人人做后盾2</h2>
+	<h2>后盾网 人人做后盾3</h2>
+	<h2>后盾网 人人做后盾4</h2>
+</div>
+
+</body>
+</html>
