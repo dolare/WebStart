@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+
+	//onkeyup onkeypress
+	window.onkeydown = function(e){
+		alert("Hello");
+
+		var ev = window.event||e;
+
+		//键盘码 和 将键盘码转成字符
+		alert(ev.keyCode);
+		var word = String.fromCharCode(ev.keyCode);
+		alert(word);
+	}
+</script>
+<body>
+	
+</body>
+</html>

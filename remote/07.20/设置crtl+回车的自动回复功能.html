@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ctrl + enter</title>
+</head>
+
+<script type="text/javascript">
+	window.onkeydown = function(e){
+		var ev = window.event || e;
+		// alert(ev.altKey);
+		if(ev.ctrlKey && ev.keyCode==13){
+			alert('提交留言');
+		}
+		
+	}
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3 漂浮广告</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#pic{
+		position: absolute;
+		width: 250px;
+		height: 260px;
+	}
+	#ad{
+		width: 250px;
+		height: 260px;
+		position: relative;
+	}
+
+	#btn{
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		border: 0;
+		background: none;
+	}
+</style>
+<script type="text/javascript">
+	// 浏览器载入
+	window.onload = function(){
+		// 抓取元素
+		var pic = document.getElementById('pic');
+		var btn = document.getElementById('btn');
+		// 获取浏览器相关参数
+		var browser_x = window.innerWidth; //浏览器宽度
+		var browser_y = window.innerHeight; //浏览器高度
+		// 获取图片相关参数
+		var pic_w    = pic.offsetWidth;//图片宽度;
+		var pic_h    = pic.offsetHeight;//图片高度;
+		// 图片运动函数
+		// 定义运动步长增量
+		var	zLeft = 1;
+		var	zTop  = 1;
+		function move(){
+			// 获得图片left和top值
+			var pic_left = pic.offsetLeft;//图片left值;
+			var pic_top  = pic.offsetTop;//图片top值;
+			// 计算新的left和top值
+			var new_left = parseInt(pic_left) + zLeft;
+			var new_top  = parseInt(pic_top)  + zTop;
+			// 将新值赋值给图片
+			pic.style.left = new_left + 'px';
+			pic.style.top  = new_top  +'px';
+			// 判断碰撞情况
+			if(new_left == 0 || new_left == (browser_x-pic_w)){
+				zLeft = -zLeft;
+			}
+			if(new_top == 0 || new_top == (browser_y-pic_h)){
+				zTop = -zTop;
+			}
+		}
+
+		// 设置一个定时器，每隔一段时间top和left值变化一次;
+		var timer = setInterval(move,10);
+		// 当鼠标移入图片时图片停止
+		pic.onmouseover = function(){
+			clearInterval(timer);
+		}
+		// 当鼠标移出图片时，图片移动
+		pic.onmouseout =function(){
+			timer = setInterval(move,10);
+		}
+		// 点击关闭按钮时图片消失
+		btn.onclick = function(){
+			pic.style.display = 'none';
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div id="pic" style="left:0px;top:0px;display:blcok;" >
+		<div id="ad">
+			<img id="img" src="ad.jpg" alt="广告" />
+			<input type="button" value="" id="btn" />
+		</div>
+	</div>
+</body>
+</html>

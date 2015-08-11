@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>放大镜</title>
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	#left{width:400px;height:400px;float: left;border:1px solid red; background: url(images/400.jpg);position:relative; margin-left: 100px; margin-top: 100px}
+	#kuai{width:200px;height:200px;background: #f00;opacity: 0.2; filter:alpha(opacity=20);position:absolute;left: 0;top: 0; display: none;}
+	#gaizi{width:400px;height:400px;background: red;opacity: 0; filter:alpha(opacity=0);position:absolute;left: 0;top: 0; cursor: crosshair; }
+	#right{width:400px;height:400px;float: left;border:1px solid blue; overflow: hidden;margin: 10px 0px 0px 10px;position:relative; display: none; margin-top: 110px}
+	#pic{position: absolute;left: 0;top: 0;}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var gaizi = document.getElementById('gaizi');      //获取盖子
+		var pic = document.getElementById('pic');      //获取右边图片
+		var kuai = document.getElementById('kuai');      //获取右边滑块
+		var box_left = document.getElementById('left');      //获取左侧大框
+		var box_right = document.getElementById('right');      //获取右侧大框
+
+		gaizi.onmousemove=function(e){
+			box_right.style.display='block'; //右侧显示
+			kuai.style.display='block';     //小白块显示
+			var ev= window.event|| e;     //事件对象
+			oleft= ev.layerX || ev.offsetX;  //获取鼠标到#left左边框的距离
+			otop = ev.layerY || ev.offsetY;  //获取鼠标到#left上边框的距离
+			nleft = oleft-100;                //设置滑块的left值
+			ntop = otop-100;					//设置滑块的top值
+			//document.title= nleft +'||' + ntop; 
+			//判断并设定滑块的值，不让其超出左边大框外
+			if(nleft<0){nleft=0};
+			if(nleft>200){nleft=200};
+			if(ntop<0){ntop=0};
+			if(ntop>200){ntop=200};
+			//给滑块赋值
+			kuai.style.left=nleft+'px';
+			kuai.style.top=ntop+'px';
+			//document.title= kuai.style.left +'||' + kuai.style.top; 
+			//给右边的图片赋值
+			pic.style.left=nleft*-2+'px';
+			pic.style.top=ntop*-2+'px';
+
+
+		gaizi.onmouseout=function(){
+			box_right.style.display='none'; //右侧隐藏
+			kuai.style.display='none';     //小滑块隐藏
+		}
+		}
+
+
+
+
+
+
+
+
+	}
+</script>
+</head>
+
+<body>
+	<div id="left">
+		<div id="kuai"></div>
+		<div id="gaizi"></div>
+	</div>
+	<div id="right">
+		<img src="images/800.jpg" alt="" id="pic" />
+	</div>
+
+</body>
+</html>

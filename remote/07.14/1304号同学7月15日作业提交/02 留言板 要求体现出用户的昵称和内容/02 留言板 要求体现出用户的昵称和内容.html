@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2 留言板 要求体现出用户的昵称和内容</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#main{
+		width: 734px;
+		height: 800px;
+		margin: 20px auto;
+	}
+	#header{
+		width: 734px;
+		height: 168px;
+		float: left;
+		margin-bottom: 15px;
+	}
+	#content{
+		width: 676px;
+		height: 650px;
+		padding: 20px 28px;
+		float: left;
+		border: 1px #c8c8c8 solid;
+		overflow: hidden;
+	}
+	#hd{
+		margin-bottom: 12px;
+	}
+	#center{
+		width: 676px;
+		height: 300px;
+		overflow: auto;
+	}
+	#line{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	/*注册表单*/
+	#footer .leimu{
+		width: 676px;
+		height: 20px;
+		padding-bottom: 15px;
+	}
+	#footer .leimu .biaoti{
+		height: 20px;
+		line-height: 20px;
+		font-size: 14px;
+	}
+	#footer .leimu dt{
+		float: left;
+		text-align: right;
+		width: 120px;
+	}
+	#footer .leimu dd{
+		width: 245px;
+		float: left;
+		text-align: left;
+		padding-left: 20px;
+		font-size: 14px;
+	}
+	#footer .leimu .miaoshu{
+		width: 200px;
+		color: #888;
+	}		
+	#footer .leimu .text{
+		width: 250px;
+		height: 20px;
+		border: 1px #ddd solid;
+		background: #f2f2f2;
+		color: #888;
+
+	}
+	/*留言内容*/
+	#footer .chc_box{
+		padding: 0 25px 0 5px;
+	}
+	#footer .textarea{
+		width: 400px;
+		height: 115px;
+		color: #888;
+		border: 1px #ddd solid;
+		background: #f2f2f2;
+		font-size: 14px;
+	}
+	#footer .jieshao{
+		height: 115px;
+
+	}
+	/*提交注册*/
+	#footer .button{
+		width: 100px;
+		height: 30px;
+		padding: 0;
+		margin: 0 0 0 140px;
+		border: 1px #990000 solid;
+		cursor: pointer;
+		background: #bf0000;
+		color: #fff;
+
+	}
+	#footer .button:hover{
+		color: #fff;
+		background: #E80000;
+		border: 1px #bf0000 solid;
+	}
+	/*留言展示内容*/
+	#words .word{
+		width: 622px;
+		height: 30px;
+		line-height: 30px;
+		background: #f1f1f1;
+		font-size: 14px;
+		padding: 0 18px;
+	}
+	#words .topwords{
+		margin-bottom: 1px;
+	}
+	#words .botwords{
+		margin-bottom: 18px;
+	}
+	
+	/*楼层*/
+	#words .topwords .lou{
+		color: #bf0000;
+		padding-right: 20px;
+	}
+	/*姓名*/
+	#words .topwords .nc{
+		min-width: 60px;
+		display: inline-block;
+		padding-right: 15px;
+	}
+	/*电话*/
+	#words .topwords .dianhua{
+		color: #bf0000;
+	}
+	/*留言*/
+	#words .botwords .nr{
+		color: #bf0000;
+	}
+</style>
+<script type="text/javascript">
+	// 浏览器载入
+	window.onload = function(){
+		// 抓取元素
+		var words   = document.getElementById('words');
+		var nicheng = document.getElementById('nicheng');
+		var shouji  = document.getElementById('shouji');
+		var liuyan  = document.getElementById('liuyan');
+		var btn     = document.getElementById('btn');
+		var i = 1;
+		// 添加按钮单击事件
+		btn.onclick = function(){
+			i++;
+			// 创建topwords  DIV
+			var new_topwords = document.createElement('div');
+			var nc_val = nicheng.value; //获取姓名
+			var sj_val = shouji.value; //获取手机号码
+			if(nc_val == ''){
+				alert('请输入您的姓名！')
+				return;
+			}
+			if(nc_val.length>1){
+				nc_val = nc_val.substring(0,1)+'**';//隐藏姓名后面部分
+			}
+
+			if(sj_val == ''){
+				alert('请输入手机号码！')
+				return;
+			}
+			if(sj_val.length>3&&sj_val.length<12){
+				sj_val = sj_val.substring(0,3)+'****'+sj_val.substring(7,11);//隐藏号码中间部分
+			}
+			
+			new_topwords.innerHTML = '<span class="lou">'+i+'楼</span><span class="nc">'+nc_val+'</span><span class="dianhua">电话：</span>'+  sj_val;// 设置DIV内容
+			new_topwords.setAttribute('class','topwords word');// 设置DIV属性
+			words.appendChild(new_topwords);// 将新创建的topwords插入到指定位置
+			
+			//创建botwords   DIV
+			var new_botwords = document.createElement('div');
+			var ly_val =liuyan.value;
+			if(ly_val == ''){
+				alert('发布内容不能为空！')
+				return;
+			}
+			new_botwords.innerHTML = '<span class="nr">留言：</span>'+liuyan.value;// 设置DIV内容
+			new_botwords.setAttribute('class','botwords word');// 设置DIV属性
+			words.appendChild(new_botwords);// 将新创建的topwords插入到指定位置
+			// 提交后清空value
+			nicheng.value = '';
+			shouji.value = '';
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div id="main">
+		<!-- 广告图片 -->
+		<div id="header">
+			<img src="ad.jpg" alt="广告" />
+		</div>
+		<div id="content">
+			<div id="hd"><img src="hd.jpg" alt="" /></div>
+			<!-- 留言展示区 -->
+			<div id="center">
+				<div id="words">
+					<div class="topwords word"><span class="lou">1楼</span><span class="nc">曾**</span><span class="dianhua">电话：</span>137****2501</div>
+					<div class="botwords word"><span class="nr">留言：</span>贵公司的大显X820 产品，如果可以待机时间长一点，产品质量很一般。</div>
+				</div>
+			</div>
+			<div id="line">
+				<img src="line.jpg" alt="" />
+			</div>
+			<!-- 留言提交区 -->
+			<div id="footer">
+				<form action="#" method="post">
+				<!-- 昵称 -->
+				<dl class="leimu">
+					<dt class="biaoti">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</dt>
+					<dd>
+						<input class="text" type="text" id="nicheng" value="" />
+					</dd>
+					<dd class="miaoshu">
+						※ 姓名必填，可修改
+					</dd>
+				</dl>
+				<!-- 手机号 -->
+				<dl class="leimu">
+					<dt class="biaoti">手&nbsp;&nbsp;&nbsp;&nbsp;机：</dt>
+					<dd>
+						<input class="text" type="text" id="shouji" value="" maxlength="11"/>
+					</dd>
+					<dd class="miaoshu">
+						※ 手机号码不能为空
+					</dd>
+				</dl>
+				<!-- 留言内容 -->
+				<dl class="leimu jieshao ">
+					<dt class="biaoti">内&nbsp;&nbsp;&nbsp;&nbsp;容：</dt>
+					<dd>
+						<textarea class="textarea" id="liuyan"></textarea>
+					</dd>
+				</dl>
+				<!-- 提交按钮 -->
+				<dl >
+					<dt class="biaoti">
+						<input class="button" type="button" value="点击提交" id="btn" />
+					</dt>
+				</dl>
+			</form>
+			</div>	
+		</div>
+		
+	</div>
+</body>
+</html>

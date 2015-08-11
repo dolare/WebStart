@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	#ad{
+		width: 174px;
+		height: 300px;
+		position: relative;
+	}
+	#btn{
+		top: 13px;
+		right: 5px;
+		width: 18px;
+		height: 18px;
+		cursor: pointer;
+		position: absolute;
+		background: none;
+
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload = function(){
+		//获取各个节点信息
+		var ad = document.getElementById("ad");
+
+		var btn = document.getElementById("btn");
+
+		//获得可视区域的宽高
+		var window_width = document.documentElement.clientWidth;
+		var window_height = document.documentElement.clientHeight;
+
+		var max_top = window_height - ad.offsetHeight -300 ;
+		var max_left = window_width - ad.offsetWidth - 300;
+
+		var add_left = 1;
+		var add_top = 1;
+		var newH1 = document.createElement("p");
+		var newH2 = document.createElement("p");
+		newH1.innerHTML = max_top;
+		ad.appendChild(newH1);
+		ad.appendChild(newH2);
+		
+		move = function (){
+			var old_left  = ad.offsetLeft;
+			var old_top = ad.offsetTop;
+
+			var new_left = old_left + add_left;
+			var new_top = old_top + add_top;
+
+
+			ad.style.left = new_left + "px";
+			ad.style.top = new_top + "px";
+			
+			newH2.innerHTML = add_top;
+
+			if(new_top == max_top || new_top == 0){
+				add_top = (-1) * add_top;
+			}
+			if(new_left == max_top || new_left == 0){
+				add_left = (-1) * add_left;
+			}
+
+		}
+		
+		timer = setInterval(move,100);
+
+		//停止移动
+		ad.onmouseover = function(){
+			clearInterval(timer);
+		}
+
+		//重新启动移动 鼠标移出事件
+		ad.onmouseout = function(){
+			timer = setInterval(move,100);
+		}
+
+		//关闭
+		btn.onclick = function(){
+			ad.style.display = "none";
+		}
+
+
+
+	}
+</script>
+<body>
+	<div id="ad">
+		<img src="ad.jpg" alt="" id="ad1">
+		<input type="button" value="" id="btn">
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	img{
+		width: 180px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		// 抓到所有的图片
+		var is = document.getElementsByTagName('img');
+		// 循环，给每个图片都添加一个单击事件
+		for(var i=0;i<is.length;i++){
+			// 给i号img元素添加一个属性（变量）
+			is[i].xuhao = i;
+
+			// 给i号img元素添加单击事件
+			is[i].onclick = function(){
+				alert(this.xuhao);
+			}
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<img src="images/01.jpg" alt="" />
+<img src="images/02.jpg" alt="" />
+<img src="images/03.jpg" alt="" />
+<img src="images/04.jpg" alt="" />
+<img src="images/05.jpg" alt="" />
+<img src="images/06.jpg" alt="" />
+<img src="images/07.jpg" alt="" />
+<img src="images/08.jpg" alt="" />
+<img src="images/09.jpg" alt="" />
+<img src="images/10.jpg" alt="" />
+<img src="images/11.jpg" alt="" />
+<img src="images/12.jpg" alt="" />
+<img src="images/13.jpg" alt="" />
+<img src="images/14.jpg" alt="" />
+<img src="images/15.jpg" alt="" />
+<img src="images/16.jpg" alt="" />
+<img src="images/17.jpg" alt="" />
+<img src="images/18.jpg" alt="" />
+<img src="images/19.jpg" alt="" />
+<img src="images/20.jpg" alt="" />
+<img src="images/21.jpg" alt="" />
+<img src="images/22.jpg" alt="" />
+<img src="images/23.jpg" alt="" />
+<img src="images/24.jpg" alt="" />
+<img src="images/25.jpg" alt="" />
+<img src="images/26.jpg" alt="" />
+<img src="images/27.jpg" alt="" />
+<img src="images/28.jpg" alt="" />
+<img src="images/29.jpg" alt="" />
+<img src="images/30.jpg" alt="" />
+
+
+</body>
+</html>

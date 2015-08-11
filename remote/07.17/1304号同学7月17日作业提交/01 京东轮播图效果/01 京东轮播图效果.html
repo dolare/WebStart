@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>1、京东轮播图效果</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	img{
+		border: 0;
+	}
+	#main{
+		width: 730px;
+		height: 454px;
+		margin: 20px auto;
+	}
+	#carousel{
+		width: 730px;
+		height: 454px;
+		overflow: hidden;
+		position: relative;
+	}
+	#stage{
+		position: relative;
+	}
+	/*图片*/
+	#content{
+		width: 730px;
+		height: 454px;
+		position: relative;
+	}
+	#content li{
+		position: absolute;
+		width: 730px;
+		height: 454px;
+		left: 0;
+		top: 0;
+	}
+	/*轮播触点*/
+	#stick{
+		position: absolute;
+		left: 0;
+		bottom: 8px;
+		width: 730px;
+		text-align: center;
+		font-size: 0;
+		z-index: 9;
+	}
+	#stick li{
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		display: inline-block;
+		background: #3e3e3e;
+		color: #fff;
+		border-radius: 50%;
+		margin: 0 2px;
+		font-size: 12px;
+		cursor: pointer;
+	}
+	#stick .selected{
+		background: #b61b1f;
+	}
+	/*播放箭头*/
+	#prev,
+	#next{
+		background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+		width: 28px;
+		height: 62px;
+		line-height: 62px;
+		font-size: 22px;
+		font-family: simsun;
+		display: block;
+		color: #fff;
+		position: absolute;
+		z-index: 9;
+		text-align: center;
+		cursor: pointer;
+	}
+	#prev{
+		left: 0;
+		top: 196px;
+	}
+	#next{
+		right: 0;
+		top: 196px;
+	}
+</style>
+<script type="text/javascript">
+	// 浏览器载入
+	window.onload = function(){
+		// 抓取元素 自上而下抓取
+		var cal = document.getElementById('carousel'); //轮播模块
+		var prev = document.getElementById('prev');		//左箭头
+		var next = document.getElementById('next');     //右箭头
+		var conLi = document.getElementById('content').getElementsByTagName('li'); //抓到所有轮播图片
+		var cdLi = document.getElementById('stick').getElementsByTagName('li');//抓到所有触点
+		
+		// 图片自动播放部分
+		var c = 0; //定义一个自增变量（全局变量）
+		timer = setInterval(auto,3000);// 设置一个定时器
+		// 定义自动轮播函数
+		function auto(){
+			c++;
+			if(c == 6){c = 0;}
+			// 让第C号图片显示，其他的隐藏
+			for(i=0;i<conLi.length;i++){
+				if(i == c){
+					conLi[i].style.display = 'block';//让第i号图片显示
+					cdLi[i].setAttribute('class','selected');// 设置第i号触点的class为selected，其样式为红色
+				}else{
+					conLi[i].style.display = 'none';//让除了第i号图片的其他图片隐藏
+					cdLi[i].setAttribute('class','');//让除了第i号触点的class值为空，其样式为黑色
+				}
+			}
+		}
+		//点击向右的箭头next轮播函数
+		next.onclick = function(){
+			c++;
+			if(c == 6){c = 0;}
+			// 让第C号图片显示，其他的隐藏
+			for(i=0;i<conLi.length;i++){
+				if(i == c){
+					conLi[i].style.display = 'block';//让第i号图片显示
+					cdLi[i].setAttribute('class','selected');// 设置第i号触点的class为selected，其样式为红色
+				}else{
+					conLi[i].style.display = 'none';//让除了第i号图片的其他图片隐藏
+					cdLi[i].setAttribute('class','');//让除了第i号触点的class值为空，其样式为黑色
+				}
+			}
+		}
+		// 点击向左箭头prev轮播函数
+		prev.onclick = function(){
+			c--;
+			if(c == -1){c = 5;}
+			// 让第C号图片显示，其他的隐藏
+			for(i=0;i<conLi.length;i++){
+				if(i == c){
+					conLi[i].style.display = 'block';//让第i号图片显示
+					cdLi[i].setAttribute('class','selected');// 设置第i号触点的class为selected，其样式为红色
+				}else{
+					conLi[i].style.display = 'none';//让除了第i号图片的其他图片隐藏
+					cdLi[i].setAttribute('class','');//让除了第i号触点的class值为空，其样式为黑色
+				}
+			}
+		}
+		// 给轮播触点添加鼠标移入事件
+		for(i=0;i<cdLi.length;i++){
+			cdLi[i].onmouseover = function(){
+				// 清理定时器
+				clearInterval(timer);
+				// 获得当前触点的序号
+				for(n=0;n<cdLi.length;n++){
+					if(this == cdLi[n]){
+						c = n;//将触点的序号存到c里
+					}
+				}
+				// 让第C号图片显示，其他的隐藏
+				for(i=0;i<conLi.length;i++){
+					if(i == c){
+						conLi[i].style.display = 'block';//让第i号图片显示
+						cdLi[i].setAttribute('class','selected');// 设置第i号触点的class为selected，其样式为红色
+					}else{
+						conLi[i].style.display = 'none';//让除了第i号图片的其他图片隐藏
+						cdLi[i].setAttribute('class','');//让除了第i号触点的class值为空，其样式为黑色
+					}
+				}
+			}
+			
+		}
+		// 鼠标移入轮播模块事件
+		cal.onmouseover = function(){
+			row.style.display = 'block';//播放箭头显示
+			clearInterval(timer);//清理定时器
+		}
+		// 鼠标移出轮播模块事件
+		cal.onmouseout = function(){
+			row.style.display = 'none';//播放箭头隐藏
+			timer = setInterval(auto,3000);//恢复定时器
+		}
+	}
+</script>
+</head>
+	
+<body>
+<div id="box">
+	<div id="main">
+		<div id="carousel">
+			<!-- 播放箭头 -->
+			<div id="row" style="display:none;">
+				<span id="prev">&lt;</span>
+				<span id="next">&gt;</span>
+			</div>
+			<div id="stage">
+				<!-- 播放内容 -->
+				<ul id="content">
+					<li class="list" style="display:block;"><a href=""><img src="images/1.jpg" alt="" /></a></li>
+					<li class="list" style="display:none;"><a href=""><img src="images/2.jpg" alt="" /></a></li>
+					<li class="list" style="display:none;"><a href=""><img src="images/3.jpg" alt="" /></a></li>
+					<li class="list" style="display:none;"><a href=""><img src="images/4.jpg" alt="" /></a></li>
+					<li class="list" style="display:none;"><a href=""><img src="images/5.jpg" alt="" /></a></li>
+					<li class="list" style="display:none;"><a href=""><img src="images/6.jpg" alt="" /></a></li>
+				</ul>
+				<!-- 轮播触点 -->
+				<ul id="stick">
+					<li class="selected">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

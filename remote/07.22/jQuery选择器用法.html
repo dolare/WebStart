@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	// $('#list p').css('color', 'red');
+	// $('#one').css('color', 'red');
+	// 所有css选择器在jquery中全都能用
+	// $('#one').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里的儿子辈的span标签
+	// $('#list>span').css({'color':'red','font-size':'25px'});
+
+	// 选择的是紧邻在#one后面的p标签
+	// $('#one+p').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#one后面的同级所有p标签
+	// $('#one~p').css({'color':'red','font-size':'25px'});
+
+	// 选择的是list里的第一个p标签
+	// $('#list p:first').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里的p标签，排除掉id是one的
+	// $('#list p:not(#one)').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里面的序号为偶数的p标签
+	// $('#list p:even').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里的3号p标签
+	// $('#list p:eq(3)').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list中序号大于2的p标签
+	// $('#list p:gt(2)').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list中内容含有  盾5  的p标签
+	// $('#list p:contains(盾5)').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里面含有span标签的p标签
+	// $('#list p:has(span)').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里有class属性的p标签
+	// $('#list p[class]').css({'color':'red','font-size':'25px'});
+
+	// 选择的是#list里class属性等于hd的p标签
+	$('#list p[class=hd]').css({'color':'red','font-size':'25px'});
+
+
+})
+
+</script>
+</head>
+
+<body>
+<div id="list">
+	<p>后盾网 人人做后盾0</p>
+	<p id="one">后盾网 人人做后盾1</p>
+	<p>后盾网 人人做后盾2</p>
+	<p class="three">后盾网 人人做后盾3</p>
+	<p>后盾网 人人做后盾4 <span>我们也是span标签</span></p>
+	<p class="hd">后盾网 人人做后盾5</p>
+	<p>后盾网 人人做后盾6 <span>我们也是span标签</span></p>
+	<p class="hd">后盾网 人人做后盾7 <span>我们也是span标签</span></p>
+	<p>后盾网 人人做后盾8</p>
+	<p>后盾网 人人做后盾9</p>
+	<span>我是span标签</span>
+</div>
+
+
+</body>
+</html>

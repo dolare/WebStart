@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#jd{
+		width: 730px;
+		height: 454px;
+		border: 2px solid blue;
+		margin: 10px auto;
+		position: relative;
+	}
+	#jd img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: none;
+	}
+	#jd ul{
+		position: absolute;
+		bottom: 8px;
+		left: 339px;
+	}
+	#jd ul li{
+		width: 18px;
+		height: 18px;
+		background: #414141;
+		float: left;
+		margin-right: 4px;
+		list-style: none;
+		border-radius: 50%;
+		line-height: 18px;
+		text-align: center;
+		color: white;
+		font-size: 12px;
+		font-family: Arial,Verdana,"宋体";
+	}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	var jd = document.getElementById('jd');
+	var imgs = jd.getElementsByTagName('img');
+	var lis = jd.getElementsByTagName('li');
+	var c = 0;//大总管变量，任何需要改变图片的操作都是通过这个变量去指定
+
+	function run(){
+		c++;
+		c = (c==6)?0:c;
+		// 让c号图片显示，其他的全隐藏，c号li变红，其他的变灰
+		// 先让所有的图片都隐藏,所有的li变灰
+		for(var i=0;i<6;i++){
+			imgs[i].style.display = 'none';
+			lis[i].style.background = '#414141';
+		}
+		// 让c号图片显示，c号li变红
+		imgs[c].style.display = 'block';
+		lis[c].style.background = '#B61B1F';
+	}
+	// 设置定时器，每隔一秒钟就换一张图片
+	timer = setInterval(run,1000)
+
+	// 循环，给每个li加鼠标移入事件
+	for(var i=0;i<6;i++){
+		// 给i号li加序号
+		lis[i].xuhao = i;
+
+		// 加移入事件
+		lis[i].onmouseover = function(){
+			// 清理定时器
+			clearInterval(timer);
+			// alert(this.xuhao)
+			// 无论是通过什么方式控制同一块效果的实现，都要通过同一个变量去控制
+			c = this.xuhao;
+			// 让c号图片显示，其他的全隐藏，c号li变红，其他的变灰
+			// 先让所有的图片都隐藏,所有的li变灰
+			for(var i=0;i<6;i++){
+				imgs[i].style.display = 'none';
+				lis[i].style.background = '#414141';
+			}
+			// 让c号图片显示，c号li变红
+			imgs[c].style.display = 'block';
+			lis[c].style.background = '#B61B1F';
+		}
+
+		// 鼠标移出事件
+		lis[i].onmouseout = function(){
+			// 设置定时器
+			timer = setInterval(run,1000)
+		}
+
+	}
+
+
+
+}
+</script>
+</head>
+
+<body>
+
+<div id="jd">
+	<!-- img[src=images/$.jpg]*6 -->
+	<img src="1.jpg" style="display:block;" />
+	<img src="2.jpg" alt="" />
+	<img src="3.jpg" alt="" />
+	<img src="4.jpg" alt="" />
+	<img src="5.jpg" alt="" />
+	<img src="6.jpg" alt="" />
+
+	<ul>
+		<li style="background:#B61B1F;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</div>
+
+
+</body>
+</html>

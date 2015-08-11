@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+	window.onload = function(){
+		var jd = document.getElementById("jd");
+		var test = document.getElementById("test");
+		var img = jd.getElementsByTagName("img");
+		var ul = jd.getElementsByTagName("ul");
+		var lis = jd.getElementsByTagName("li");
+		var index = 0;
+		var index1 = 0;
+
+		var run = function(){
+			//让一张图片显示 其他全部隐藏 
+			index++;
+			if(index == 6)index = 0;
+			for (var i = 0; i < img.length; i++) {
+				img[i].style.display = "none";
+				lis[i].style.background = "#414141";
+			}
+			//test
+			var newP1 = document.createElement("p");
+			test.style.background = "blue";
+			newP1.innerHTML = index;
+			test.appendChild(newP1);
+			//test
+
+			img[index].style.display = "block";
+			lis[index].style.background="red";
+			
+		}
+		timer = setInterval(run,1000);
+
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].dex = i;
+			lis[i].onmouseover = function(){
+				index1 = this.dex;
+				clearInterval(timer);
+			
+				for (var i = 0; i < img.length; i++) {
+					img[i].style.display = "none";
+					lis[i].style.background = "#414141";
+				}
+				img[index1].style.display = "block";
+				lis[index1].style.background="red";
+			}
+			lis[i].onmouseout = function(){
+				timer = setInterval(run,1000);
+			}
+		}
+		
+
+
+		
+	}	
+
+</script>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#test{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background: green;
+		width: 100px;
+		height: 100px;
+	}
+	#jd{
+		width: 730px;
+		height: 454px;
+		border: ;
+		margin: 10px auto;
+		position: relative;
+	}
+	#jd img{
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		display: none;
+
+	}
+	#jd ul {
+		position: absolute;
+		bottom: 8px;
+		left: 339px;
+		
+	}
+	#jd ul li{
+		background: #414141;
+		float: left;
+		margin-left: 4px;
+		list-style: none;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		color: white;
+		font-size: 12px;
+		font-family: Arial,Verdana;
+		text-align: center;
+		line-height: 18px;
+	}
+</style>
+<body>
+	<div id="test"><p>ke</p></div>
+	<div id="jd">
+		<img src="1.jpg" alt="" style="display:block">
+		<img src="2.jpg" alt="">
+		<img src="3.jpg" alt="">
+		<img src="4.jpg" alt="">
+		<img src="5.jpg" alt="">
+		<img src="6.jpg" alt="">
+		<ul>
+			<li style="background = red">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+</body>
+</html>

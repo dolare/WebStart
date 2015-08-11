@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	#hd{
+		width: 500px;
+		height: 500px;
+		background: green;
+	}
+
+</style>
+
+
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("hd").onclick = function(){
+			this.style.background = "blue";
+		}
+	}
+</script>
+<body>
+	<div id="hd"></div>
+</body>
+</html>

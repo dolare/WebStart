@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打字游戏</title>
+
+</head>
+
+<script type="text/javascript">
+
+window.onload = function(){
+	var list = document.getElementById("list");
+	var arr = ['A','B','C','D','E','F'];
+	 window.onkeydown = function(e){
+	 	
+	 	var ev = window.event||e;
+
+	 	var key = String.fromCharCode(ev.keyCode);
+
+	 	//对比每个li的内容和按下的字母
+	 	
+	 	var lis = list.getElementsByTagName("li");
+	 	for(var i = 0; i < lis.length; i++){
+	 		if(lis[i].innerHTML == key){
+	 			list.removeChild(lis[i]);
+
+	 			var num = Math.floor(Math.random()*6);
+
+	 			var newLi = document.createElement("li");
+
+	 			newLi.innerHTML = arr[num];
+	 			alert(num);
+	 			list.appendChild(newLi);
+
+	 			break;
+	 		}
+	 	}
+	 }
+}
+	
+</script>
+<body>
+	<ul id="list">
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+		<li>E</li>
+	</ul>
+</body>
+</html>
