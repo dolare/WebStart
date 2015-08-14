@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#menu.cur{
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+	
+	// 给窗口加滚动条事件
+	$(window).scroll(function() {
+		// 获得已经滚动上去的距离
+		var st = $(document).scrollTop();
+		if(st>109){
+			// 让menu固定定位
+			$('#menu').addClass('cur');
+		}else{
+			// 取消固定定位
+			$('#menu').removeClass('cur');
+		}
+	});
+	
+
+})
+
+</script>
+</head>
+
+<body>
+
+<!-- img[src=bbs$.jpg]*3 -->
+<img src="bbs1.jpg" alt="" />
+<img src="bbs2.jpg" id="menu" />
+<img src="bbs3.jpg" alt="" />
+
+
+
+
+</body>
+</html>

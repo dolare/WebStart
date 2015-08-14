@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#test{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background: green;
+		width: 100px;
+		height: 100px;
+	}
+	#jd{
+		width: 730px;
+		height: 454px;
+		border: ;
+		margin: 10px auto;
+		position: relative;
+	}
+	#jd img{
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		display: none;
+
+	}
+	#jd ul {
+		position: absolute;
+		bottom: 8px;
+		left: 339px;
+		
+	}
+	#jd ul li{
+		background: #414141;
+		float: left;
+		margin-left: 4px;
+		list-style: none;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		color: white;
+		font-size: 12px;
+		font-family: Arial,Verdana;
+		text-align: center;
+		line-height: 18px;
+	}
+	#jd .rbtn{
+		width: 28px;
+		height: 62px;
+		top: 191px;
+		right: 0px;
+		position: absolute;
+		background: rgba(0,0,0,0.2);
+		line-height: 62px;
+		font-size: 22px;
+		color: white;
+		text-align: center;
+		display: none;
+		text-decoration: none;
+	}
+	#jd .lbtn{
+		width: 28px;
+		height: 62px;
+		top: 191px;
+		left: 0px;
+		position: absolute;
+		background: rgba(0,0,0,0.2);
+		line-height: 62px;
+		font-size: 22px;
+		color: white;
+		text-align: center;
+		display: none;
+		text-decoration: none;
+	}
+
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		 var index = 0;
+
+		 function display(){
+		 	$("#jd img").eq(index).show().siblings("img").hide();
+
+		 	$("#jd ul li").eq(index).css({
+		 		background: 'red',
+		 	}).siblings('li').css({
+		 		background: 'black',
+		 	});;
+		 }
+
+		 var run = function(){
+		 	index++;
+		 	if (index == 5) {index = 0};
+		 	display();
+		 }
+
+		 timer = setInterval(run,1000);
+
+
+		 $("#jd").mouseover(function(){
+		 	clearInterval(timer);
+		 	$("#jd a").show();
+		 })
+
+		 $("#jd").mouseout(function(){
+		 	 timer = setInterval(run,1000);
+		 	 $("#jd a").hide();
+		 })
+
+		 $('#jd .lbtn').click(function() {
+			index--;
+			index = (index==-1)?5:index;
+			// 让c号图片显示，其他图片隐藏
+			display();
+		});
+
+		// 给右侧按钮加单击事件
+		$('#jd .rbtn').click(function() {
+			index++;
+			index = (index==6)?0:index;
+			// 让c号图片显示，其他图片隐藏
+			display();
+		});
+
+		 $("#jd ul li").mouseover(function(){
+		 	//获得当前鼠标移入的li的序号
+		 	index = $(this).index();
+		 	$("#jd img").eq(index).fadeIn(1000).siblings("img").fadeOut(1000);
+
+		 	$("#jd ul li").eq(index).css({
+		 		background: 'red',
+		 	}).siblings('li').css({
+		 		background: 'black',
+		 	});;
+		 })
+	})
+</script>
+<body>
+	<div id="test"><p>ke</p></div>
+	<div id="jd">
+		<img src="1.jpg" alt="" style="display:block">
+		<img src="2.jpg" alt="">
+		<img src="3.jpg" alt="">
+		<img src="4.jpg" alt="">
+		<img src="5.jpg" alt="">
+		<img src="6.jpg" alt="">
+		<ul>
+			<li style="background = red">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+
+		<!-- 阻止a标签跳转 -->
+		<a href="javascript:void(0);" class="lbtn"><</a>
+		<a href="javascript:void(0);" class="rbtn">></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#jd{
+		width: 208px;
+		height: 465px;
+		border: 1px solid #B61D1D;
+		background: #C81524;
+		margin: 10px;
+		position: relative;
+	}
+	#jd li{
+		height: 31px;
+		width: 208px;
+		/*border-bottom: 1px solid yellow;*/
+		list-style: none;
+	}
+	#jd li .title{
+		width: 208px;
+		height: 31px;
+		font-size: 14px;
+		line-height: 31px;
+		font-family: 微软雅黑;
+		color: white;
+		text-indent: 10px;
+		position: relative;
+	}
+	#jd .title span{
+		font-size: 9px;
+		font-family: consolas;
+		color: white;
+		position: absolute;
+		right: 13px;
+		top: 0px;
+		display: block;
+		line-height: 31px;
+	}
+	#jd li .hide_box{
+		width: 500px;
+		height: 500px;
+		border: 1px solid #B61D1D;
+		background: white;
+		position: absolute;
+		left: 208px;
+		top: -1px;
+		line-height: 500px;
+		text-align: center;
+		font-size: 40px;
+		display: none;
+	}
+	#jd li.cur p.title{
+		background: white;
+		color: #B61D1D;
+		width: 209px;
+		z-index: 2;
+	}
+	#jd li.cur .hide_box{
+		display: block;
+	}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	$('#jd li').hover(function() {
+		$(this).addClass('cur');
+	}, function() {
+		$(this).removeClass('cur');
+	});
+
+})
+
+
+</script>
+</head>
+
+<body>
+
+<ul id="jd">
+	<li>
+		<p class="title">家用电器<span>></span></p>
+		<div class="hide_box">
+			家用电器
+		</div>
+	</li>
+	<li>
+		<p class="title">手机、数码、京东通信<span>></span></p>
+		<div class="hide_box">
+			手机、数码、京东通信
+		</div>
+	</li>
+	<li>
+		<p class="title">电脑、办公<span>></span></p>
+		<div class="hide_box">
+			电脑、办公
+		</div>
+	</li>
+	<li>
+		<p class="title">家居、家具、家装、厨具<span>></span></p>
+		<div class="hide_box">
+			家居、家具、家装、厨具
+		</div>
+	</li>
+	
+	<li>
+		<p class="title">男装、女装、内衣、珠宝<span>></span></p>
+		<div class="hide_box">
+			男装、女装、内衣、珠宝
+		</div>
+	</li>
+	<li>
+		<p class="title">家用电器33<span>></span></p>
+		<div class="hide_box">
+			家用电器333
+		</div>
+	</li>
+
+
+
+</ul>
+
+
+</body>
+</html>

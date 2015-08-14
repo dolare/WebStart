@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 	
 $(function(){
 	// 绑定事件
-	$('#btn').click(function(){
+	$('#btn1').click(function(){
 		// 图片隐藏
 		// $('#pic').hide();
 		// $('#pic').show();
@@ -26,24 +26,44 @@ $(function(){
 
 		// 让透明度在2000毫秒内渐变到0.5
 		$('#pic').fadeTo(2000,0.5);
-		
-
-
 	});
 
+	$("#btn2").click(function(){
+		$('#pic').hide();
+	});
 
+	$("#btn3").click(function(){
+		$('#pic').show();
+	});
+
+	$("#btn4").click(function(){
+		$('#pic').toggle();
+	});
+
+	$("#btn5").click(function(){
+		$('#pic').fadeIn(5000);
+	});
+
+	$("#btn6").click(function(){
+		$('#pic').fadeOut(5000,function(){
+			alert('帅哥再见！');
+		 });
+	});
 
 })
 
 
 </script>
-</head>
 
 <body>
 
-<input type="button" value="点我啊" id="btn" />
-<br /><br />
 
+<input type="button" value="点我啊1" id="btn1" />
+<input type="button" value="点我啊2" id="btn2"/>
+<input type="button" value="点我啊3" id="btn3"/>
+<input type="button" value="点我啊4" id="btn4"/>
+<input type="button" value="点我啊5" id="btn5"/>
+<input type="button" value="点我啊6" id="btn6"/>
 <img src="meinv.jpg" alt="" id="pic" style="display:block;" />
 
 

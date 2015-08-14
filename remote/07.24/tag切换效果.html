@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	#box{
+		width: 600px;
+		height: 500px;
+		border: 2px solid blue;
+		margin:10px auto;
+		position: relative;
+	}
+
+	#box ul li{
+		list-style: none;
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 25px;
+		color: white;
+		float: left;
+
+	}
+
+	#box .con{
+		width: 580px;
+		height: 430px;
+		position: absolute;
+		left: 10px;
+		top: 60px;
+		display: none;
+	}
+
+	#box .xiaoqiu{
+		width: 200px;
+		height: 10px;
+		background: orange;
+		position: absolute;
+		left: 0;
+		top: 50px;
+	}
+
+
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#box ul li").mouseover(function(){
+			var li_index = $(this).index();
+
+			$("#box .con").eq(li_index).show().siblings('.con').hide();
+
+			var left = li_index*200;
+
+			$("#box .xiaoqiu").stop().animate({left:left + "px"},500)
+		})
+	})
+</script>
+
+<body>
+	<div id="box">
+		<ul>
+			<li style="background:#22B14C">1</li>
+			<li style="background:#00A2E8">2</li>
+			<li style="background:#A349A4">3</li>
+		</ul>
+
+		<div class="con" style="background:#22B14C;display:block;"></div>
+		<div class="con" style="background:#00A2E8;"></div>
+		<div class="con" style="background:#A349A4;"></div>
+		
+		<div class="xiaoqiu"></div>
+
+	</div>
+		
+
+</body>
+</html>

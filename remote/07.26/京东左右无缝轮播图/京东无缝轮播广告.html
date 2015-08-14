@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#out{
+		width: 1003px;
+		height: 164px;
+		border: 2px solid blue;
+		margin: 20px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#out .in{
+		width: 5020px;
+		height: 164px;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#out .in img{
+		float: left;
+		margin-right: 1px;
+	}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var c = 0;
+
+		// 点击右侧按钮
+		$('.right').click(function() {
+			c--;
+			if(c==-5){
+				$('#out .in').css('left', '0');
+				c=-1;
+			}
+			// 计算left值
+			var left = c*1004;
+			// 让大divleft值改变到left位置上
+			$('#out .in').stop().animate({'left':left+'px'}, 700);
+		});
+
+
+		// 点击左侧按钮
+		$('.left').click(function() {
+			c++;
+			if(c==1){
+				$('#out .in').css('left', '-4016px');
+				c=-3;
+			}
+			// 计算left值
+			var left = c*1004;
+			// 让大divleft值改变到left位置上
+			$('#out .in').stop().animate({'left':left+'px'}, 700);
+		});
+
+	})
+
+
+
+</script>
+</head>
+
+<body>
+<input type="button" value="左按钮" class="left" />
+<input type="button" value="右按钮" class="right" />
+	<div id="out">
+		<div class="in">
+			<!-- img[src=images/$.jpg]*16 -->
+			<img src="1.jpg" alt="" />
+			<img src="2.jpg" alt="" />
+			<img src="3.jpg" alt="" />
+			<img src="4.jpg" alt="" />
+			<img src="5.jpg" alt="" />
+			<img src="6.jpg" alt="" />
+			<img src="7.jpg" alt="" />
+			<img src="8.jpg" alt="" />
+			<img src="9.jpg" alt="" />
+			<img src="10.jpg" alt="" />
+			<img src="11.jpg" alt="" />
+			<img src="12.jpg" alt="" />
+			<img src="13.jpg" alt="" />
+			<img src="14.jpg" alt="" />
+			<img src="15.jpg" alt="" />
+			<img src="16.jpg" alt="" />
+		</div>
+
+	</div>
+
+</body>
+</html>

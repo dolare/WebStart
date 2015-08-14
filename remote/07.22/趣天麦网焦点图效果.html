@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#jiaodiantu{
+
+	}
+	#jiaodiantu img{
+		float: left;
+		opacity:0.7;
+	}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#jiaodiantu img").mouseover(function(){
+			$(this).fadeTo(0,1);
+		})
+		$("#jiaodiantu img").mouseout(function(){
+			$(this).fadeTo(0,0.7);
+		})
+	})
+</script>
+<body>
+	<div id="jiaodiantu">
+		<img src="1.jpg" alt="">
+		<img src="2.jpg" alt="">
+		<img src="3.jpg" alt="">
+		<img src="4.jpg" alt="">
+		<img src="5.jpg" alt="">
+	</div>
+</body>
+</html>

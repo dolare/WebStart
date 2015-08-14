@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#go").click(function(){
+		 	 $("#block").animate({ 
+		    width: "90%",
+		    height: "100%", 
+		    fontSize: "10em", 
+		    borderWidth: 10,
+		    position:"absolute",
+		    "left":"+500px",
+		    "top":"+100px"
+		  }, 2000 );
+		});
+
+		$("#right").click(function(){
+		  	$("#block").animate({left: '+50px'}, "slow");
+		});
+
+		$("#left").click(function(){
+		  	$("#block").animate({left: '-50px'}, "slow");
+		});
+	})
+</script>
+
+<body>
+	<button id="left">«</button> <button id="right">»</button>
+	<button id="go"> Run</button>
+	<div id="block">Hello!</div>
+</body>
+</html>

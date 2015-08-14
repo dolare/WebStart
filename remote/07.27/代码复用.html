@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.title{
+		width: 200px;
+		height: 50px;
+		background: grey;
+		color: white;
+		line-height: 50px;
+		text-align: center;
+	}
+	.qrcode{
+		width: 200px;
+		height: 300px;
+		background: green;
+		display: none;
+	}
+	.menu{
+		width: 200px;
+		height: 50px;
+		border: 3px solid blue;
+		float: left;
+		margin: 20px;
+	}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	$('.menu').hover(function() {
+		$(this).find('.qrcode').show();
+	}, function() {
+		$(this).find('.qrcode').hide();
+	});
+
+})
+
+
+</script>
+</head>
+
+<body>
+
+<div class="menu">
+	<p class="title">关注京东</p>
+	<div class="qrcode"></div>
+</div>
+
+<div class="menu">
+	<p class="title">关注京东</p>
+	<div class="qrcode"></div>
+</div>
+
+<div class="menu">
+	<p class="title">关注京东</p>
+	<div class="qrcode"></div>
+</div>
+
+<div class="menu">
+	<p class="title">关注京东</p>
+	<div class="qrcode"></div>
+</div>
+
+<div class="menu">
+	<p class="title">关注京东</p>
+	<div class="qrcode"></div>
+</div>
+
+
+
+
+</body>
+</html>
