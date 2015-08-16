@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            margin: 150px auto;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+        }
+        .box span{
+            width: 9px;
+            height: 4px;
+            display: block;
+            margin: 150px auto;
+            background: url("images/ico01.png") no-repeat;
+            transition: 0.2s ease-out;
+            -moz-transition: 0.2s ease-out;
+            -webkit-transition: 0.2s ease-out;
+            -o-transition: 0.2s ease-out;
+        }
+        .box:hover span{
+            -moz-transform:rotate(180deg);
+            -webkit-transform:rotate(180deg);
+            -o-transform:rotate(180deg);
+            transform:rotate(180deg);
+            filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <span></span>
+</div>
+</body>
+</html>
